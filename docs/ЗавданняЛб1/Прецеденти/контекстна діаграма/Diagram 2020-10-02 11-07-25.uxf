@@ -1,0 +1,11 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>110</x><y>170</y><w>100</w><h>120</h></coordinates><panel_attributes>Системний 
+адміністратор</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>210</x><y>180</y><w>160</w><h>120</h></coordinates><panel_attributes>Працівник відділу кадрів 
+(HRStudent)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>200</x><y>300</y><w>120</w><h>120</h></coordinates><panel_attributes>Викладач кафедри
+(Department)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>310</y><w>120</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Виконавець&gt;&gt;
+Система аналізу 
+процесу навчання</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>300</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>410</x><y>290</y><w>170</w><h>40</h></coordinates><panel_attributes>*University TSD-22, TSD-25*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>300</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>250</y><w>140</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Виконавець&gt;&gt;
+Служба аутентифікації</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>360</x><y>90</y><w>140</w><h>70</h></coordinates><panel_attributes>Контекстна діаграма
+bg=yellow
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>330</y><w>140</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Виконавець&gt;&gt;
+Служба інформаційної 
+системи МОН</panel_attributes><additional_attributes></additional_attributes></element></diagram>
