@@ -20,12 +20,16 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
+                    //TODO HR menu
                     break;
                 case "2":
+                    //TODO PR menu
                     break;
                 case "3":
+                    //TODO CM menu
                     break;
                 case "4":
+                    //TODO exit
                     break;
             }
 

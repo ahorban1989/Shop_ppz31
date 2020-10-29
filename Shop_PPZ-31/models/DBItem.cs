@@ -42,5 +42,24 @@ namespace Shop_PPZ_31.models
 
             return default(T);
         }
+
+        public void Update(T item)
+        {
+            int itemIndex = Items.FindIndex(i => { IItem it = (IItem)i;
+                                                    IItem uit = (IItem)item;
+                                                    return it.Id == uit.Id; });
+            if (itemIndex == -1) throw new ArgumentException("didn`t find item with this id", "item");
+            Items[itemIndex] = item;
+        }
+
+        public void Delete(int idx)
+        {
+            int itemIndex = Items.FindIndex(i => {
+                IItem it = (IItem)i;
+                return it.Id == idx;
+            });
+            if (itemIndex == -1) throw new ArgumentException("didn`t find item with this id", "item");
+            Items.RemoveAt(idx);
+        }
     }
 }
