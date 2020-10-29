@@ -23,7 +23,7 @@ namespace Shop_PPZ_31.models
         }
         public override string ToString()
         {
-            return string.Format($"{Id} {Name} {Surname} {Position} {ChiefId}");
+            return string.Format($"id: {Id}, name: {Name}, Surname: {Surname}, position: {Position}, chiefId: {ChiefId}");
         }
     }
 }

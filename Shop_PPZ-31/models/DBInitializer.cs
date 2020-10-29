@@ -33,15 +33,15 @@ namespace Shop_PPZ_31.models
             dbEmployee.AddItem(employee2);
 
             DBItem<Order> dbOrder = DBItem<Order>.DBInstance();
-            Order order1 = new Order(1, 1, "Order1");
+            Order order1 = new Order(1, 1);
             dbOrder.AddItem(order1);
-            Order order2 = new Order(2, 2, "Order2");
+            Order order2 = new Order(2, 2);
             dbOrder.AddItem(order2);
 
             DBItem<ProductOrder> dbProductOrder = DBItem<ProductOrder>.DBInstance();
-            ProductOrder productOrder1 = new ProductOrder(1, 1, 1);
+            ProductOrder productOrder1 = new ProductOrder(1,10, 1, 1);
             dbProductOrder.AddItem(productOrder1);
-            ProductOrder productOrder2 = new ProductOrder(2, 2, 2);
+            ProductOrder productOrder2 = new ProductOrder(2,20, 2, 2);
             dbProductOrder.AddItem(productOrder2);
         }
     }

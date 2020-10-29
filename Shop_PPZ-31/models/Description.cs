@@ -19,7 +19,7 @@ namespace Shop_PPZ_31.models
         }
         public override string ToString()
         {
-            return string.Format($"{Id} {ProductId} {Info}");
+            return string.Format($"id:{Id}, productId:{ProductId}, info:{Info}");
         }
     }
 }
