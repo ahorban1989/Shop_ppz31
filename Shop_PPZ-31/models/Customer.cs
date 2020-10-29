@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Shop_PPZ_31.interfaces;
 
-namespace Shop_PPZ_31
+namespace Shop_PPZ_31.models
 {
-    class Customer
+    class Customer : IItem
     {
         private static int count = 1;
         public int Id { get; set; }

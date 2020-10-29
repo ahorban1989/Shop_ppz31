@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shop_PPZ_31
+namespace Shop_PPZ_31.Controllers
 {
-    class HR
+    class CustomerManager
     {
     }
 }
