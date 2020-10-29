@@ -1,5 +1,6 @@
 ﻿using System;
 using Shop_PPZ_31.models;
+using Shop_PPZ_31.views;
 
 namespace Shop_PPZ_31
 {
@@ -59,6 +60,8 @@ namespace Shop_PPZ_31
                     }
                 }
             }
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Run();
             Console.ReadLine();
         }
     }
