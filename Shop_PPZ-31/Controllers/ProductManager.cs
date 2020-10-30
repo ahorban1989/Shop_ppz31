@@ -26,7 +26,7 @@ namespace Shop_PPZ_31.Controllers
             }
         }
 
-        //**READ
+        //**READ ALL
         public static List<ProductView> GetAll ()
         {
             List <ProductView> productViews = new List<ProductView>();
@@ -51,6 +51,15 @@ namespace Shop_PPZ_31.Controllers
             }
 
             return productViews;
+        }
+
+        //**READ 1
+        public static ProductView GetById(int id)
+        {
+            ProductView productView = new ProductView();
+            //TODO**********
+            
+            return productView;
         }
 
         #endregion
