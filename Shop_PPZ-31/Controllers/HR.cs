@@ -16,6 +16,7 @@ namespace Shop_PPZ_31.Controllers
             dbEmloyees.AddItem(employee);
         }
         
+        [Obsolete("this is proprety is obsolete. Use properny in new class HrManager", true)]
         public Employee GetEmployeeByID(int id)
         {
             Employee employee = null;
@@ -31,12 +32,12 @@ namespace Shop_PPZ_31.Controllers
             return employee;
 
         }
-
+        [Obsolete("this is proprety is obsolete. Use properny in new class HrManager", true)]
         public List<Employee> GetAllEmployees()
         {
             return dbEmloyees.Items;
         }
-
+        [Obsolete("this is proprety is obsolete. Use properny in new class HrManager", true)]
         public void UpdateEmployee(Employee employee)
         {
             try
@@ -50,7 +51,7 @@ namespace Shop_PPZ_31.Controllers
             }
 
         }
-
+        [Obsolete("this is proprety is obsolete. Use properny in new class HrManager", true)]
         public List<Order> GetAllEmployeeOrdersById(int id)
         {
             //LINQ selection from dbOrders
