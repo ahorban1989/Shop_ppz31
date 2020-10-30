@@ -17,51 +17,9 @@ namespace Shop_PPZ_31
 
             DBInitializer dbInit = new DBInitializer();
 
-            foreach (Customer customer in dbCustomer.Items) 
-            {
-                Console.WriteLine(customer);
+            tests.Test2 test2 = new tests.Test2();
+            test2.RunTetst();
 
-                foreach (Order order in dbOrder.Items)
-                {
-                    if (order.CustomerId == customer.Id)
-                    {
-                        Console.WriteLine("\t" + order);
-
-                        foreach (Employee employee in dbEmployee.Items)
-                        {
-                            if (employee.Id == order.EmployeeId)
-                            {
-                                Console.WriteLine("\t\t" + employee);
-                            }
-                        }
-                        foreach (ProductOrder productOrder in dbProductOrder.Items)
-                        {
-                            if (productOrder.OrderId == order.Id)
-                            {
-                                Console.WriteLine("\t\t\t" + productOrder);
-
-                                foreach (Product product in dbProduct.Items)
-                                {
-                                    if(product.Id == productOrder.ProductId)
-                                    {
-                                        Console.WriteLine("\t\t\t\t" + product);
-
-                                        foreach (Description description in dbDescription.Items)
-                                        {
-                                            if(description.ProductId == product.Id)
-                                            {
-                                                Console.WriteLine("\t\t\t\t\t" + description);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.Run();
             Console.ReadLine();
         }
     }
