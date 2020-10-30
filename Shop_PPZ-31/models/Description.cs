@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Shop_PPZ_31.interfaces;
 
-namespace Shop_PPZ_31
+namespace Shop_PPZ_31.models
 {
-    class Description
+    class Description : IItem
     {
         private static int count = 1;
         public int Id { get; set; }
@@ -18,7 +19,7 @@ namespace Shop_PPZ_31
         }
         public override string ToString()
         {
-            return string.Format($"{Id} {ProductId} {Info}");
+            return string.Format($"id:{Id}, productId:{ProductId}, info:{Info}");
         }
     }
 }

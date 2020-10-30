@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shop_PPZ_31
+namespace Shop_PPZ_31.interfaces
 {
-    class CustomerManager
+    interface IItem
     {
+        public int Id { get; }
     }
 }

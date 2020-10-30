@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Shop_PPZ_31.models;
 
-namespace Shop_PPZ_31
+namespace Shop_PPZ_31.Controllers
 {
     class ProductManager
     {
