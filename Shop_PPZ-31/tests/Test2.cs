@@ -11,6 +11,7 @@ namespace Shop_PPZ_31.tests
     {
         public void RunTetst()
         {
+            Console.WriteLine("<----TEST2---->");
             //GetAll Emloyees
             List<SimpleEmployeeView> simpleEmployeeViews = HrManager.GetAll();
             foreach (SimpleEmployeeView simpleEmployeeView in simpleEmployeeViews)

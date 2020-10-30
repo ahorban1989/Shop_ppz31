@@ -6,8 +6,8 @@ namespace Shop_PPZ_31.models.viewModels
 {
     class EmployeeView
     {
-        Employee EmployeeV { get; set; }
-        Employee ChiefV { get; set; }
-        List<OrderView> OrderViewsV { get; set; }
+        public Employee EmployeeV { get; set; }
+        public Employee ChiefV { get; set; }
+        public List<SimpleOrderView> SimpleOrderViewsV { get; set; }
     }
 }

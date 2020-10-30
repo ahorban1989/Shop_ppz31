@@ -20,6 +20,9 @@ namespace Shop_PPZ_31
             tests.Test2 test2 = new tests.Test2();
             test2.RunTetst();
 
+            tests.Test3 test3 = new tests.Test3();
+            test3.RunTetst();
+
             Console.ReadLine();
         }
     }
