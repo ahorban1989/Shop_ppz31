@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>0</x>
+      <y>120</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Customer Manager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>140</x>
+      <y>80</y>
+      <w>170</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Регистрация Customer_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>320</x>
+      <y>80</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Создание Order_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>450</x>
+      <y>80</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Вопрос о Product_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>580</x>
+      <y>80</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Формирование ProductOrder_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>790</x>
+      <y>80</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Добавление Product в Order_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1000</x>
+      <y>80</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Утверждение Order_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1150</x>
+      <y>80</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Приём Оплаты_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
