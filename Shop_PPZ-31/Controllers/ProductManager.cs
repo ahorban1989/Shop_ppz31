@@ -57,9 +57,72 @@ namespace Shop_PPZ_31.Controllers
         public static ProductView GetById(int id)
         {
             ProductView productView = new ProductView();
-            //TODO**********
+            try
+            {
+                productView.ProductV = dbProducts.FindById(id);
+                productView.DescriptionV = null;
+                foreach(Description description in dbDescriptions.Items)
+                {
+                    if(description.ProductId == productView.ProductV.Id)
+                    {
+                        productView.DescriptionV = description;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e);
+                throw;
+            }
             
             return productView;
+        }
+        //**UPDATE PRODUCT
+        public static void ProductUpdate (Product product)
+        {
+            try
+            {
+                dbProducts.Update(product);
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e);
+                throw;
+            }
+        }
+        //**UPDATE PRODUCT DESCRIPTION
+        public static void DescriptionUpdate (Description description)
+        {
+            try
+            {
+                dbDescriptions.Update(description);
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e);
+                throw;
+            }
+        }
+        //DELETE
+        public static void Delete(int id)
+        {
+            Product product;
+            try
+            {
+                product = dbProducts.FindById(id);
+
+                foreach (Description description in dbDescriptions.Items)
+                {
+                    if (description.ProductId == product.Id) dbDescriptions.Delete(description.Id);
+                }
+
+                dbProducts.Delete(id);
+            }
+            catch (Exception e)
+            {
+
+                Console.Error.WriteLine(e);
+            }
         }
 
         #endregion
