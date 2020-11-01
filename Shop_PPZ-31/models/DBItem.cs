@@ -27,9 +27,10 @@ namespace Shop_PPZ_31.models
             return dbItem;
         }
       
-        public void AddItem(T item) 
+        public T AddItem(T item) 
         {
             Items.Add(item);
+            return Items[Items.Count - 1];
         }
 
         public T FindById(int id)
@@ -54,12 +55,14 @@ namespace Shop_PPZ_31.models
 
         public void Delete(int idx)
         {
+            //Console.WriteLine("-->" + idx);
             int itemIndex = Items.FindIndex(i => {
                 IItem it = (IItem)i;
                 return it.Id == idx;
             });
+            //Console.WriteLine("<--" + itemIndex);
             if (itemIndex == -1) throw new ArgumentException("didn`t find item with this id", "item");
-            Items.RemoveAt(idx);
+            Items.RemoveAt(itemIndex);
         }
     }
 }

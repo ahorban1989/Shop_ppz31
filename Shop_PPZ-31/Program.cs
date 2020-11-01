@@ -17,11 +17,9 @@ namespace Shop_PPZ_31
 
             DBInitializer dbInit = new DBInitializer();
 
-            tests.Test2 test2 = new tests.Test2();
-            test2.RunTetst();
+            tests.TestHrManager testHrManager = new tests.TestHrManager();
+            testHrManager.RunTest();
 
-            tests.Test3 test3 = new tests.Test3();
-            test3.RunTetst();
 
             Console.ReadLine();
         }

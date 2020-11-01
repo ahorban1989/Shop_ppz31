@@ -13,11 +13,11 @@ namespace Shop_PPZ_31.Controllers
 
         #region Product CRUD
         //**CREATE
-        public static void CreateProduct(Product product)
+        public static Product CreateProduct(Product product)
         {
             try
             {
-                dbProducts.AddItem(product);
+                return dbProducts.AddItem(product);
             }
             catch (Exception e)
             {

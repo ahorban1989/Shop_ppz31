@@ -17,11 +17,11 @@ namespace Shop_PPZ_31.Controllers
         #region CRUD
 
         //**Create
-        public static void CreateEmployee(Employee employee)
+        public static Employee CreateEmployee(Employee employee)
         {
             try
             {
-                dbEmployees.AddItem(employee);
+                return dbEmployees.AddItem(employee);
             }
             catch (Exception e)
             {
