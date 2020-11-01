@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Shop_PPZ_31.views.helpers
 {
-    static class ImputHelpers
+    static class ConsoleImputHelpers
     {
         public static string ImputName()
         {
