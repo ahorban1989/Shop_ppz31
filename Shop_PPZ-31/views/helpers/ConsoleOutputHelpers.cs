@@ -23,6 +23,21 @@ namespace Shop_PPZ_31.views.helpers
             Console.WriteLine("id: " + e.EmployeeV.Id + ",\t name: " + e.EmployeeV.Name
                                + ", \t chief name: " + e.ChiefV.Name);
         }
+
+        public static void OutputProductView(ProductView p)
+        {
+            Console.WriteLine($"id: {p.ProductV.Id}, product name: {p.ProductV.Name}" +
+                $", poroduct price: {p.ProductV.Price}, description: {p.DescriptionV.Info}");
+        }
+
+        public static void OutputProductOrderView(ProductOrderView po)
+        {
+            Console.WriteLine($"id: {po.ProuctOrderV.Id}, product: {po.ProductV.Name}" +
+                $", quantity: {po.ProuctOrderV.ProductCount}, price for 1: {po.ProuctOrderV.ProductPrice}" +
+                $", sum: {po.ProuctOrderV.ProductCount*po.ProuctOrderV.ProductPrice}");
+        }
+
+
     }
 
 
