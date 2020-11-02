@@ -14,7 +14,14 @@ namespace Shop_PPZ_31.views.helpers
 
         public static void OutputSimpleCustomerView(SimpleCustumerView c)
         {
-            // TODO!!!!!!!!
+            Console.WriteLine("id: " + c.CustomerV.Id + ", name: " + c.CustomerV.Name + ", surname: "
+                               + c.CustomerV.Surname + ", Number of orders: " + c.OrderCountV);
+        }
+
+        public static void OutputSimpleEmployyeeView(SimpleEmployeeView e)
+        {
+            Console.WriteLine("id: " + e.EmployeeV.Id + ",\t name: " + e.EmployeeV.Name
+                               + ", \t chief name: " + e.ChiefV.Name);
         }
     }
 
