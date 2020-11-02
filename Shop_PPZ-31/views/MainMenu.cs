@@ -20,7 +20,7 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO HR menu
+                    HrMainMenu mainMenu = new HrMainMenu(controllers.HrManager.GetAll());
                     break;
                 case "2":
                     //TODO PR menu

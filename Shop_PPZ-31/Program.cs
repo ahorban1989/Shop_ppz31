@@ -21,7 +21,7 @@ namespace Shop_PPZ_31
             tests.TestHrManager testHrManager = new tests.TestHrManager();
             testHrManager.RunTest();
 
-            views.HrMainMenu hrMainMenu = new HrMainMenu(Controllers.HrManager.GetAll());
+            views.HrMainMenu hrMainMenu = new HrMainMenu(controllers.HrManager.GetAll());
             hrMainMenu.Run();
 
 

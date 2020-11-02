@@ -5,7 +5,7 @@ using Shop_PPZ_31.models;
 using Shop_PPZ_31.models.viewModels;
 using System.Linq;
 
-namespace Shop_PPZ_31.Controllers
+namespace Shop_PPZ_31.controllers
 {
     static class CustomerManager
     {

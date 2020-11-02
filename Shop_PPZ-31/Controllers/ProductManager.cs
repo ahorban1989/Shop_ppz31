@@ -4,7 +4,7 @@ using System.Text;
 using Shop_PPZ_31.models;
 using Shop_PPZ_31.models.viewModels;
 
-namespace Shop_PPZ_31.Controllers
+namespace Shop_PPZ_31.controllers
 {
     static class ProductManager
     {
