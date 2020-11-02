@@ -9,7 +9,7 @@ namespace Shop_PPZ_31
         internal MainMenu MainMenu { get; set; }
         static void Main(string[] args)
         {
-            /*DBItem<Product> dbProduct = DBItem<Product>.DBInstance();
+            DBItem<Product> dbProduct = DBItem<Product>.DBInstance();
             DBItem<Description> dbDescription = DBItem<Description>.DBInstance();
             DBItem<Customer> dbCustomer = DBItem<Customer>.DBInstance();
             DBItem<Employee> dbEmployee = DBItem<Employee>.DBInstance();
@@ -19,11 +19,11 @@ namespace Shop_PPZ_31
             DBInitializer dbInit = new DBInitializer();
 
             tests.TestHrManager testHrManager = new tests.TestHrManager();
-            testHrManager.RunTest();*/
+            testHrManager.RunTest();
 
-            Program program = new Program();
-            program.MainMenu = new MainMenu();
-            program.MainMenu.Run();
+            views.HrMainMenu hrMainMenu = new HrMainMenu(Controllers.HrManager.GetAll());
+            hrMainMenu.Run();
+
 
             Console.ReadLine();
         }
