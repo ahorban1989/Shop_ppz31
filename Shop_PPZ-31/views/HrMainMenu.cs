@@ -40,7 +40,7 @@ namespace Shop_PPZ_31.views
                     //TODO detail
                     break;
                 case "3":
-                    //TODO exit
+                    SetDone();
                     break;
             }
 
