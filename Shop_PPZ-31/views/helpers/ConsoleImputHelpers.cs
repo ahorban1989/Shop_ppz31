@@ -10,7 +10,7 @@ namespace Shop_PPZ_31.views.helpers
         public static string ImputName()
         {
             // throw new NotImplementedException();
-            const string pattern = "^[a-zA-Z ]+$";
+            const string pattern = "^[а-яА-ЯёЁa-zA-Z ]+$";
             Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
             string rightString = Console.ReadLine();
             while (!rgx.IsMatch(rightString))
