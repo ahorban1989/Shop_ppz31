@@ -25,6 +25,18 @@ namespace Shop_PPZ_31.Controllers
                 throw;
             }
         }
+        public static Description CreateProductDescription(Description productDescription)
+        {
+            try
+            {
+                return dbDescriptions.AddItem(productDescription);
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e);
+                throw;
+            }
+        }
 
         //**READ ALL
         public static List<ProductView> GetAll ()

@@ -35,6 +35,7 @@ namespace Shop_PPZ_31.Controllers
                                   select o;
 
                 simpleCustumerView.OrderCountV = selectOrder.Count();
+                simpleCustumerViews.Add(simpleCustumerView);
             }
 
             return simpleCustumerViews;
