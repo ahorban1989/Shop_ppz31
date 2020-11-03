@@ -41,6 +41,7 @@ namespace Shop_PPZ_31.models
                 if (iItem.Id == id) return item;
             }
 
+            throw new ArgumentException("did not find object with this id", "id");
             return default(T);
         }
 

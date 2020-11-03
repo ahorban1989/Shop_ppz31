@@ -52,7 +52,9 @@ namespace Shop_PPZ_31.views
                     catch (ArgumentException e)
                     {
                         Console.WriteLine("did not find Object with this id!!!");
-                        Console.WriteLine(e);
+                        Console.WriteLine(e.Message);
+                        Console.WriteLine("pres any key to continue");
+                        Console.ReadKey();
                         break;
                     }
                     
