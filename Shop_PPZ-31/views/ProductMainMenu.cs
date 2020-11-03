@@ -9,7 +9,7 @@ namespace Shop_PPZ_31.views
 {
     class ProductMainMenu : AbstractMenu
     {
-        ConsoleColor conColorlor = ConsoleColor.Cyan;
+        ConsoleColor conColorlor = ConsoleColor.DarkYellow;
         ConsoleColor colorDefoult;
 
         List<ProductView> productViews;
@@ -37,26 +37,30 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO Add
-                    Console.Write("Please input product's name: ");
-                    string name = views.helpers.ConsoleImputHelpers.ImputName();
-                    Console.Write("Please input product's price: ");
-                    decimal price = views.helpers.ConsoleImputHelpers.ImputDecimalNumber();
-                    Product product = new Product(name, price);
-                    ProductManager.CreateProduct(product);
-                    //Console.Write("Please input product id in it's descripion: ");
-                    //int productId = views.helpers.ConsoleImputHelpers.ImputIntNumber();
-                    int productId = product.Id;
-                    Console.Write("Please input info about product in it's descripion: ");
-                    string productInfo = views.helpers.ConsoleImputHelpers.ImputName();
-                    Description description = new Description(productId, productInfo);
-                    ProductManager.CreateProductDescription(description);
+                    ProductAddMenu productAddMenu = new ProductAddMenu();
+                    productAddMenu.Run();
+                    productViews = ProductManager.GetAll();
                     break;
                 case "2":
-                    //TODO detail
+                    Console.Write("Enter product id:");
+                    int id = helpers.ConsoleImputHelpers.ImputIntNumber();
+                    ProductDetailMenu productDetailMenu;
+                    try
+                    {
+                        productDetailMenu = new ProductDetailMenu(ProductManager.GetById(id));
+                    }
+                    catch (ArgumentException e)
+                    {
+                        Console.WriteLine("did not find Object with this id!!!");
+                        Console.WriteLine(e.Message);
+                        Console.WriteLine("pres any key to continue");
+                        Console.ReadKey();
+                        break;
+                    }
+
+                    productDetailMenu.Run();
                     break;
                 case "3":
-                    //TODO exit
                     SetDone();
                     break;
             }
