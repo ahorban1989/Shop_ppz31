@@ -11,7 +11,7 @@ namespace Shop_PPZ_31.views
         ConsoleColor conColorlor = ConsoleColor.Cyan;
         ConsoleColor colorDefoult;
 
-        EmployeeView employeeView = new EmployeeView();
+        EmployeeView employeeView;
 
         public HrDetailMenu(EmployeeView e)
         {
@@ -32,7 +32,11 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO Edit
+                    SimpleEmployeeView se = new SimpleEmployeeView();
+                    se.EmployeeV = employeeView.EmployeeV;
+                    se.ChiefV = employeeView.ChiefV;
+                    HrUpdateMenu hrUpdateMenu = new HrUpdateMenu(se);
+                    hrUpdateMenu.Run();
                     break;
                 case "2":
                     Console.Write("Enter yes to comfirm delete: ");

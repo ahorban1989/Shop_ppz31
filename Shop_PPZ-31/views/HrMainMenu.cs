@@ -44,9 +44,19 @@ namespace Shop_PPZ_31.views
                 case "2":
                     Console.Write("Enter Employee id:");
                     int id = helpers.ConsoleImputHelpers.ImputIntNumber();
-                    HrDetailMenu hrDetailMenu = new HrDetailMenu(HrManager.GetById(id));
+                    HrDetailMenu hrDetailMenu;
+                    try
+                    {
+                        hrDetailMenu = new HrDetailMenu(HrManager.GetById(id));
+                    }
+                    catch (ArgumentException e)
+                    {
+                        Console.WriteLine("did not find Object with this id!!!");
+                        Console.WriteLine(e);
+                        break;
+                    }
+                    
                     hrDetailMenu.Run();
-                    //TODO detail
                     break;
                 case "3":
                     SetDone();
