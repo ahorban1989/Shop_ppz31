@@ -38,16 +38,9 @@ namespace Shop_PPZ_31.views
             {
                 case "1":
                     //TODO Add
-                    Console.Write("Please input employee's name: ");
-                    string name = views.helpers.ConsoleImputHelpers.ImputName();
-                    Console.Write("Please input employee's surname: ");
-                    string surname = views.helpers.ConsoleImputHelpers.ImputName();
-                    Console.Write("Please input employee's position: ");
-                    string position = views.helpers.ConsoleImputHelpers.ImputName();
-                    Console.Write("Please input employee's chiefId: ");
-                    int chiefId = views.helpers.ConsoleImputHelpers.ImputIntNumber();
-                    Employee employee = new Employee(name, surname, position, chiefId);
-                    HrManager.CreateEmployee(employee);
+                    HrAddMenu hrAddMenu = new HrAddMenu();
+                    hrAddMenu.Run();
+                    simpleEmployeeViews = HrManager.GetAll();
                     break;
                 case "2":
                     //TODO detail
