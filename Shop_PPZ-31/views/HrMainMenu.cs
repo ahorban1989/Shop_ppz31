@@ -37,16 +37,18 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO Add
                     HrAddMenu hrAddMenu = new HrAddMenu();
                     hrAddMenu.Run();
                     simpleEmployeeViews = HrManager.GetAll();
                     break;
                 case "2":
+                    Console.Write("Enter Employee id:");
+                    int id = helpers.ConsoleImputHelpers.ImputIntNumber();
+                    HrDetailMenu hrDetailMenu = new HrDetailMenu(HrManager.GetById(id));
+                    hrDetailMenu.Run();
                     //TODO detail
                     break;
                 case "3":
-                    //TODO exit
                     SetDone();
                     break;
             }
