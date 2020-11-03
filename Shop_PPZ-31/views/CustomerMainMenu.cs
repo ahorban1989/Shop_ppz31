@@ -9,7 +9,7 @@ namespace Shop_PPZ_31.views
 {
     class CustomerMainMenu : AbstractMenu
     {
-        ConsoleColor conColorlor = ConsoleColor.Cyan;
+        ConsoleColor conColorlor = ConsoleColor.DarkMagenta;
         ConsoleColor colorDefoult;
 
         List<SimpleCustumerView> simpleCustomerViews;
@@ -37,16 +37,29 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO Add
-                    Console.Write("Please input customer's name: ");
-                    string name = views.helpers.ConsoleImputHelpers.ImputName();
-                    Console.Write("Please input customer's surname: ");
-                    string surname = views.helpers.ConsoleImputHelpers.ImputName();
-                    Customer customer = new Customer(name, surname);
-                    CustomerManager.CreateCostumer(customer);
+                    CustomerAddMenu customerAddMenu = new CustomerAddMenu();
+                    customerAddMenu.Run();
+
+                    simpleCustomerViews = CustomerManager.GetAll();
                     break;
                 case "2":
-                    //TODO detail
+                    Console.Write("Enter Costumer id:");
+                    int id = helpers.ConsoleImputHelpers.ImputIntNumber();
+                    CustomerDetailMenu customerDetailMenu;
+                    try
+                    {
+                        customerDetailMenu = new CustomerDetailMenu(CustomerManager.GetById(id));
+                    }
+                    catch (ArgumentException e)
+                    {
+                        Console.WriteLine("did not find Object with this id!!!");
+                        Console.WriteLine(e.Message);
+                        Console.WriteLine("pres any key to continue");
+                        Console.ReadKey();
+                        break;
+                    }
+
+                    customerDetailMenu.Run();
                     break;
                 case "3":
                     //TODO exit
