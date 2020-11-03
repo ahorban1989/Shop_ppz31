@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Shop_PPZ_31.Controllers;
+using Shop_PPZ_31.controllers;
 using Shop_PPZ_31.models;
 using Shop_PPZ_31.models.viewModels;
 
@@ -25,7 +25,7 @@ namespace Shop_PPZ_31.views
             Console.Title = "Customer Menu";
             Console.WriteLine("\t\t\tCustomer MENU\n\t\tCustomers list");
             Console.WriteLine(SEPARATOR);
-            simpleCustomerViews = CustomerManager.GetAll();
+            List<SimpleCustumerView> simpleCustomerViews = CustomerManager.GetAll();
             foreach(SimpleCustumerView sc in simpleCustomerViews)
             {
                 helpers.ConsoleOutputHelpers.OutputSimpleCustomerView(sc);

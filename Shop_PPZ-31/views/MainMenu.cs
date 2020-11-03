@@ -21,17 +21,17 @@ namespace Shop_PPZ_31.views
             {
                 case "1":
                     //TODO HR menu
-                    views.HrMainMenu hrMainMenu = new HrMainMenu(Controllers.HrManager.GetAll());
+                    views.HrMainMenu hrMainMenu = new HrMainMenu(controllers.HrManager.GetAll());
                     hrMainMenu.Run();
                     break;
                 case "2":
                     //TODO PR menu
-                    views.ProductMainMenu productMainMenu = new ProductMainMenu(Controllers.ProductManager.GetAll());
+                    views.ProductMainMenu productMainMenu = new ProductMainMenu(controllers.ProductManager.GetAll());
                     productMainMenu.Run();
                     break;
                 case "3":
                     //TODO CM menu
-                    views.CustomerMainMenu customerMainMenu = new CustomerMainMenu(Controllers.CustomerManager.GetAll());
+                    views.CustomerMainMenu customerMainMenu = new CustomerMainMenu(controllers.CustomerManager.GetAll());
                     customerMainMenu.Run();
                     break;
                 case "4":

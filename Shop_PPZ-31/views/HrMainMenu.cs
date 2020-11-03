@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Shop_PPZ_31.Controllers;
+using Shop_PPZ_31.controllers;
 using Shop_PPZ_31.models;
 using Shop_PPZ_31.models.viewModels;
 
