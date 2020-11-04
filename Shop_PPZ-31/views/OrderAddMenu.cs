@@ -43,8 +43,9 @@ namespace Shop_PPZ_31.views
             {
                 case "1":
                     Order order = new Order(simpleCustumer.CustomerV.Id, EmployeeId);
-                    CustomerManager.CreateOrder(order);
-                    //TODO Order detail
+                    order = CustomerManager.CreateOrder(order);
+                    OrderDetailMenu orderDetailMenu = new OrderDetailMenu(CustomerManager.GetOrderById(order.Id));
+                    orderDetailMenu.Run();
                     break;
                 case "2":
                     SetDone();

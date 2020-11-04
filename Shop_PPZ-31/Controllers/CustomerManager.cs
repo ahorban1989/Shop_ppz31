@@ -13,6 +13,7 @@ namespace Shop_PPZ_31.controllers
         static DBItem<Order> dbOrders = DBItem<Order>.DBInstance();
         static DBItem<Customer> dbCustomers = DBItem<Customer>.DBInstance();
         static DBItem<ProductOrder> dbProductOrders = DBItem<ProductOrder>.DBInstance();
+        static DBItem<Product> dbProducts = DBItem<Product>.DBInstance();
 
         #region CUSTOMER CRUD
         public static Customer CreateCostumer(Customer customer)
@@ -136,6 +137,31 @@ namespace Shop_PPZ_31.controllers
             }
         }
 
+        public static OrderView GetOrderById(int id)
+        {
+            Console.WriteLine("getting started");
+            OrderView orderView = new OrderView();
+            orderView.ProductsOrderViewsV = new List<ProductOrderView>();
+            orderView.OrderV = dbOrders.FindById(id);
+            orderView.EmployeeV = dbEmployees.FindById(orderView.OrderV.EmployeeId);
+            orderView.CustosumerV = dbCustomers.FindById(orderView.OrderV.CustomerId);
+
+
+            var selectProductsOrder = from po in dbProductOrders.Items
+                                      where po.OrderId == orderView.OrderV.Id
+                                      select po;
+            foreach(ProductOrder po in selectProductsOrder)
+            {
+                ProductOrderView productOrderView = new ProductOrderView();
+                productOrderView.ProuctOrderV = po;
+                productOrderView.ProductV = dbProducts.FindById(po.ProductId);
+                Console.WriteLine("po added");
+                orderView.ProductsOrderViewsV.Add(productOrderView);
+            }
+
+            return orderView;
+        }
+
         public static void UpdateOrder (Order order)
         {
             try
@@ -190,6 +216,19 @@ namespace Shop_PPZ_31.controllers
             try
             {
                 dbProductOrders.Delete(productOrder.Id);
+            }
+            catch (Exception e)
+            {
+                Console.Error.WriteLine(e);
+                throw;
+            }
+        }
+
+        public static void DeleteProductOrder(int productOrder)
+        {
+            try
+            {
+                dbProductOrders.Delete(productOrder);
             }
             catch (Exception e)
             {

@@ -47,10 +47,30 @@ namespace Shop_PPZ_31.views
                     SetDone();
                     break;
                 case "3":
-                    //TODO add order
+                    SimpleCustumerView sc2 = new SimpleCustumerView();
+                    sc2.CustomerV = custumerView.CustomerV;
+                    sc2.OrderCountV = custumerView.SimpleOrderViewsV.Count;
+                    OrderAddMenu orderAddMenu = new OrderAddMenu(sc2);
+                    orderAddMenu.Run();
                     break;
                 case "4":
-                    //TODO Order detail
+                    Console.Write("Enter Order id:");
+                    int id = helpers.ConsoleImputHelpers.ImputIntNumber();
+                    OrderDetailMenu orderDetailMenu;
+                    try
+                    {
+                        orderDetailMenu = new OrderDetailMenu(CustomerManager.GetOrderById(id));
+                        orderDetailMenu.Run();
+                    }
+                    catch (ArgumentException e)
+                    {
+                        Console.WriteLine("did not find Object with this id!!!");
+                        Console.WriteLine(e.Message);
+                        Console.WriteLine("pres any key to continue");
+                        Console.ReadKey();
+                        break;
+                    }
+                    
                     break;
                 case "5":
                     SetDone();
