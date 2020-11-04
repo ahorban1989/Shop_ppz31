@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-04T11:44:32.944Z" agent="5.0 (Windows)" etag="oLEe8mU1R5absy57h0TD" version="13.8.9-1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-04T11:45:07.911Z" agent="5.0 (Windows)" etag="TS5qQ9jtPWnMZzOt-bP0" version="13.8.9-1" type="github">
   <diagram id="laVmVUHqH2EGiY9fDYmY" name="Page-1">
     <mxGraphModel dx="782" dy="707" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -20,7 +20,8 @@
         <mxCell id="kpGWdIf7cratf-CfFsrV-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kpGWdIf7cratf-CfFsrV-1" target="kpGWdIf7cratf-CfFsrV-3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="70" y="160" />
+              <mxPoint x="70" y="80" />
+              <mxPoint x="400" y="80" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -30,21 +31,22 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-1" value=":MainMenu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="40" width="120" height="60" as="geometry" />
+          <mxGeometry x="10" y="40" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-2" value=":HrMainMenu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="40" width="120" height="60" as="geometry" />
+          <mxGeometry x="400" y="40" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-3" value=":ProductMainMenu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="400" y="80" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-4" value=":CustomerMainMenu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="220" width="120" height="60" as="geometry" />
+          <mxGeometry x="400" y="120" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kpGWdIf7cratf-CfFsrV-1" target="kpGWdIf7cratf-CfFsrV-4">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="70" y="250" />
+              <mxPoint x="70" y="120" />
+              <mxPoint x="400" y="120" />
             </Array>
           </mxGeometry>
         </mxCell>
