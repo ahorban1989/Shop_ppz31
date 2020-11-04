@@ -6,6 +6,7 @@ namespace Shop_PPZ_31
 {
     class Program
     {
+        internal MainMenu MainMenu { get; set; }
         static void Main(string[] args)
         {
             DBItem<Product> dbProduct = DBItem<Product>.DBInstance();
@@ -17,52 +18,13 @@ namespace Shop_PPZ_31
 
             DBInitializer dbInit = new DBInitializer();
 
-            foreach (Customer customer in dbCustomer.Items) 
-            {
-                Console.WriteLine(customer);
+            tests.TestHrManager testHrManager = new tests.TestHrManager();
+            testHrManager.RunTest();
 
-                foreach (Order order in dbOrder.Items)
-                {
-                    if (order.CustomerId == customer.Id)
-                    {
-                        Console.WriteLine("\t" + order);
+            views.MainMenu MainMenu = new MainMenu();
+            MainMenu.Run();
 
-                        foreach (Employee employee in dbEmployee.Items)
-                        {
-                            if (employee.Id == order.EmployeeId)
-                            {
-                                Console.WriteLine("\t\t" + employee);
-                            }
-                        }
-                        foreach (ProductOrder productOrder in dbProductOrder.Items)
-                        {
-                            if (productOrder.OrderId == order.Id)
-                            {
-                                Console.WriteLine("\t\t\t" + productOrder);
-
-                                foreach (Product product in dbProduct.Items)
-                                {
-                                    if(product.Id == productOrder.ProductId)
-                                    {
-                                        Console.WriteLine("\t\t\t\t" + product);
-
-                                        foreach (Description description in dbDescription.Items)
-                                        {
-                                            if(description.ProductId == product.Id)
-                                            {
-                                                Console.WriteLine("\t\t\t\t\t" + description);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.Run();
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }

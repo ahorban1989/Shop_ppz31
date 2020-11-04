@@ -6,6 +6,8 @@ namespace Shop_PPZ_31.views
 {
     abstract class AbstractMenu
     {
+        protected const string SEPARATOR = "\t\t<---------->";
+
         private bool isDone = false;
 
         protected abstract void Init();
