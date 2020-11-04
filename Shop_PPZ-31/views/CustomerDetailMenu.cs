@@ -34,7 +34,11 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO EDIT
+                    SimpleCustumerView sc = new SimpleCustumerView();
+                    sc.CustomerV = custumerView.CustomerV;
+                    sc.OrderCountV = custumerView.SimpleOrderViewsV.Count;
+                    CustomerUpdateMenu customerUpdateMenu = new CustomerUpdateMenu(sc);
+                    customerUpdateMenu.Run();
                     break;
                 case "2":
                     Console.Write("Enter yes to comfirm delete: ");
