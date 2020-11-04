@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-04T11:43:52.458Z" agent="5.0 (Windows)" etag="0X3MRxbH0eSHmZsvXHYv" version="13.8.9-1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-04T11:44:32.944Z" agent="5.0 (Windows)" etag="oLEe8mU1R5absy57h0TD" version="13.8.9-1" type="github">
   <diagram id="laVmVUHqH2EGiY9fDYmY" name="Page-1">
     <mxGraphModel dx="782" dy="707" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -14,7 +14,7 @@
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-10" value="1:Create (List&amp;lt;SimpleEmployeeView&amp;gt;)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kpGWdIf7cratf-CfFsrV-5">
           <mxGeometry x="0.1111" y="-25" relative="1" as="geometry">
-            <mxPoint x="-25" y="-24" as="offset" />
+            <mxPoint x="-20" y="-45" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kpGWdIf7cratf-CfFsrV-1" target="kpGWdIf7cratf-CfFsrV-3">
@@ -26,7 +26,7 @@
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-9" value="1:Create (List&amp;lt;ProductView&amp;gt;)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kpGWdIf7cratf-CfFsrV-6">
           <mxGeometry x="0.3026" y="-4" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-24" y="-24" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="kpGWdIf7cratf-CfFsrV-1" value=":MainMenu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -46,6 +46,11 @@
             <Array as="points">
               <mxPoint x="70" y="250" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kpGWdIf7cratf-CfFsrV-11" value="1:Create (List&amp;lt;SimpleCustumerView&amp;gt;)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kpGWdIf7cratf-CfFsrV-8">
+          <mxGeometry x="0.1875" y="3" relative="1" as="geometry">
+            <mxPoint x="15" y="-17" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
