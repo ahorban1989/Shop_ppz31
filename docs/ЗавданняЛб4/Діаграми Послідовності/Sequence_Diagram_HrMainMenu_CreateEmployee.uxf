@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>10</x>
-      <y>50</y>
+      <x>40</x>
+      <y>70</y>
       <w>90</w>
       <h>30</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>70</y>
+      <x>70</x>
+      <y>90</y>
       <w>30</w>
       <h>1370</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>120</x>
-      <y>50</y>
+      <x>150</x>
+      <y>70</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
@@ -38,8 +38,8 @@ Console</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>80</y>
+      <x>180</x>
+      <y>100</y>
       <w>30</w>
       <h>1360</h>
     </coordinates>
@@ -49,8 +49,8 @@ Console</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>260</x>
-      <y>50</y>
+      <x>290</x>
+      <y>70</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
@@ -61,8 +61,8 @@ HrManager</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>90</y>
+      <x>70</x>
+      <y>110</y>
       <w>280</w>
       <h>40</h>
     </coordinates>
@@ -73,8 +73,8 @@ GetAll():List&lt;SimpleEmployeeView&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>80</y>
+      <x>320</x>
+      <y>100</y>
       <w>30</w>
       <h>1360</h>
     </coordinates>
@@ -84,8 +84,8 @@ GetAll():List&lt;SimpleEmployeeView&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>110</y>
+      <x>70</x>
+      <y>130</y>
       <w>280</w>
       <h>40</h>
     </coordinates>
@@ -96,8 +96,8 @@ simpleEmployeeViews</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>30</x>
-      <y>140</y>
+      <x>60</x>
+      <y>160</y>
       <w>590</w>
       <h>100</h>
     </coordinates>
@@ -110,8 +110,8 @@ Loop foreach
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>290</x>
-      <y>0</y>
+      <x>320</x>
+      <y>20</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -122,8 +122,8 @@ SimpleEmployeeView</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>370</x>
-      <y>50</y>
+      <x>400</x>
+      <y>70</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -134,8 +134,8 @@ SimpleEmployeeView</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>30</y>
+      <x>380</x>
+      <y>50</y>
       <w>30</w>
       <h>1410</h>
     </coordinates>
@@ -145,8 +145,8 @@ SimpleEmployeeView</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>80</y>
+      <x>460</x>
+      <y>100</y>
       <w>30</w>
       <h>1360</h>
     </coordinates>
@@ -156,8 +156,8 @@ SimpleEmployeeView</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>150</y>
+      <x>70</x>
+      <y>170</y>
       <w>340</w>
       <h>40</h>
     </coordinates>
@@ -168,8 +168,8 @@ simpleEmployeeViews</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>170</y>
+      <x>70</x>
+      <y>190</y>
       <w>420</w>
       <h>40</h>
     </coordinates>
@@ -180,8 +180,8 @@ se</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>530</x>
-      <y>50</y>
+      <x>560</x>
+      <y>70</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -192,8 +192,8 @@ ConsoleOutputHelpers</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
-      <y>80</y>
+      <x>620</x>
+      <y>100</y>
       <w>30</w>
       <h>1350</h>
     </coordinates>
@@ -203,8 +203,8 @@ ConsoleOutputHelpers</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>190</y>
+      <x>70</x>
+      <y>210</y>
       <w>580</w>
       <h>40</h>
     </coordinates>
@@ -215,8 +215,8 @@ OutputSimpleEmployyeeView(se)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>210</y>
+      <x>180</x>
+      <y>230</y>
       <w>470</w>
       <h>40</h>
     </coordinates>
@@ -227,8 +227,8 @@ WriteLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>240</y>
+      <x>70</x>
+      <y>260</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -239,8 +239,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>260</y>
+      <x>70</x>
+      <y>280</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -251,8 +251,8 @@ switchMenu</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>70</x>
-      <y>10</y>
+      <x>100</x>
+      <y>30</y>
       <w>90</w>
       <h>30</h>
     </coordinates>
@@ -262,8 +262,8 @@ switchMenu</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>30</y>
+      <x>130</x>
+      <y>50</y>
       <w>30</w>
       <h>1410</h>
     </coordinates>
@@ -273,8 +273,8 @@ switchMenu</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>280</y>
+      <x>70</x>
+      <y>300</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
@@ -285,8 +285,8 @@ Run</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>450</x>
-      <y>0</y>
+      <x>480</x>
+      <y>20</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -297,8 +297,8 @@ ConsoleImputHelpers</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>30</y>
+      <x>540</x>
+      <y>50</y>
       <w>30</w>
       <h>1410</h>
     </coordinates>
@@ -308,8 +308,8 @@ ConsoleImputHelpers</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>300</y>
+      <x>130</x>
+      <y>320</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -320,8 +320,8 @@ ImputName</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>570</y>
+      <x>130</x>
+      <y>590</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -330,32 +330,10 @@ name</panel_attributes>
     <additional_attributes>10.0;20.0;420.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1200</x>
-      <y>70</y>
-      <w>30</w>
-      <h>900</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;880.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1160</x>
-      <y>50</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>:Regex</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>190</x>
-      <y>10</y>
+      <x>220</x>
+      <y>30</y>
       <w>90</w>
       <h>30</h>
     </coordinates>
@@ -365,8 +343,8 @@ name</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>30</y>
+      <x>250</x>
+      <y>50</y>
       <w>30</w>
       <h>1410</h>
     </coordinates>
@@ -376,8 +354,8 @@ name</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>320</y>
+      <x>250</x>
+      <y>340</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -388,8 +366,8 @@ Regex</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>340</y>
+      <x>250</x>
+      <y>360</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -400,8 +378,8 @@ rgx</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>360</y>
+      <x>180</x>
+      <y>380</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -412,8 +390,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>380</y>
+      <x>180</x>
+      <y>400</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -424,8 +402,8 @@ rightString</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>120</x>
-      <y>410</y>
+      <x>150</x>
+      <y>430</y>
       <w>440</w>
       <h>160</h>
     </coordinates>
@@ -438,8 +416,8 @@ Loop while
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>420</y>
+      <x>250</x>
+      <y>440</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -450,8 +428,8 @@ Loop while
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>140</x>
-      <y>450</y>
+      <x>170</x>
+      <y>470</y>
       <w>400</w>
       <h>110</h>
     </coordinates>
@@ -465,8 +443,8 @@ Opt
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>490</y>
+      <x>180</x>
+      <y>510</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -477,8 +455,8 @@ WriteLine("Your input is incorrect. Please, try again: ")</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>510</y>
+      <x>180</x>
+      <y>530</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -489,8 +467,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>530</y>
+      <x>180</x>
+      <y>550</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -501,8 +479,8 @@ rightString</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>590</y>
+      <x>130</x>
+      <y>610</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -513,8 +491,8 @@ ImputName</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>610</y>
+      <x>250</x>
+      <y>630</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -525,8 +503,8 @@ Regex</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>630</y>
+      <x>250</x>
+      <y>650</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -537,8 +515,8 @@ rgx</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>650</y>
+      <x>180</x>
+      <y>670</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -549,8 +527,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>670</y>
+      <x>180</x>
+      <y>690</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -561,8 +539,8 @@ rightString</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>120</x>
-      <y>700</y>
+      <x>150</x>
+      <y>720</y>
       <w>440</w>
       <h>160</h>
     </coordinates>
@@ -575,8 +553,8 @@ Loop while
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>140</x>
-      <y>740</y>
+      <x>170</x>
+      <y>760</y>
       <w>400</w>
       <h>110</h>
     </coordinates>
@@ -590,8 +568,8 @@ Opt
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>710</y>
+      <x>250</x>
+      <y>730</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -602,8 +580,8 @@ Opt
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>780</y>
+      <x>180</x>
+      <y>800</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -614,8 +592,8 @@ WriteLine("Your input is incorrect. Please, try again: ")</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>800</y>
+      <x>180</x>
+      <y>820</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -626,8 +604,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>820</y>
+      <x>180</x>
+      <y>840</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -638,8 +616,8 @@ rightString</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>860</y>
+      <x>130</x>
+      <y>880</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -650,8 +628,8 @@ surname</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>880</y>
+      <x>130</x>
+      <y>900</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -662,8 +640,8 @@ ImputName</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>900</y>
+      <x>250</x>
+      <y>920</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -674,8 +652,8 @@ Regex</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>920</y>
+      <x>250</x>
+      <y>940</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -686,8 +664,8 @@ rgx</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>940</y>
+      <x>180</x>
+      <y>960</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -698,8 +676,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>960</y>
+      <x>180</x>
+      <y>980</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -710,8 +688,8 @@ rightString</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>120</x>
-      <y>990</y>
+      <x>150</x>
+      <y>1010</y>
       <w>440</w>
       <h>160</h>
     </coordinates>
@@ -724,8 +702,8 @@ Loop while
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>1000</y>
+      <x>250</x>
+      <y>1020</y>
       <w>320</w>
       <h>40</h>
     </coordinates>
@@ -736,8 +714,8 @@ Loop while
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>140</x>
-      <y>1030</y>
+      <x>170</x>
+      <y>1050</y>
       <w>400</w>
       <h>110</h>
     </coordinates>
@@ -751,8 +729,8 @@ Opt
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>1070</y>
+      <x>180</x>
+      <y>1090</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -763,8 +741,8 @@ WriteLine("Your input is incorrect. Please, try again: ")</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>1090</y>
+      <x>180</x>
+      <y>1110</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -775,8 +753,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>1110</y>
+      <x>180</x>
+      <y>1130</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -787,8 +765,8 @@ rightString</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>1150</y>
+      <x>130</x>
+      <y>1170</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -799,8 +777,8 @@ position</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>1170</y>
+      <x>130</x>
+      <y>1190</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -811,8 +789,8 @@ ImputIntNumber</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>140</x>
-      <y>1200</y>
+      <x>170</x>
+      <y>1220</y>
       <w>570</w>
       <h>100</h>
     </coordinates>
@@ -825,8 +803,8 @@ Loop while
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>640</x>
-      <y>0</y>
+      <x>670</x>
+      <y>20</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
@@ -837,8 +815,8 @@ Int32</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>30</y>
+      <x>710</x>
+      <y>50</y>
       <w>30</w>
       <h>1410</h>
     </coordinates>
@@ -848,8 +826,8 @@ Int32</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>1210</y>
+      <x>540</x>
+      <y>1230</y>
       <w>200</w>
       <h>40</h>
     </coordinates>
@@ -860,8 +838,8 @@ Int32</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>1230</y>
+      <x>180</x>
+      <y>1250</y>
       <w>560</w>
       <h>40</h>
     </coordinates>
@@ -872,8 +850,8 @@ ReadLine</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>1250</y>
+      <x>180</x>
+      <y>1270</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -884,8 +862,8 @@ result</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>1270</y>
+      <x>180</x>
+      <y>1290</y>
       <w>390</w>
       <h>40</h>
     </coordinates>
@@ -896,8 +874,8 @@ WriteLine("Your value is wrong, please give another: ")</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>1300</y>
+      <x>130</x>
+      <y>1320</y>
       <w>440</w>
       <h>40</h>
     </coordinates>
@@ -908,8 +886,8 @@ result</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>700</x>
-      <y>50</y>
+      <x>730</x>
+      <y>70</y>
       <w>90</w>
       <h>30</h>
     </coordinates>
@@ -919,8 +897,8 @@ result</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>70</y>
+      <x>760</x>
+      <y>90</y>
       <w>30</w>
       <h>1360</h>
     </coordinates>
@@ -930,8 +908,8 @@ result</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>1320</y>
+      <x>130</x>
+      <y>1340</y>
       <w>660</w>
       <h>40</h>
     </coordinates>
@@ -942,8 +920,8 @@ new</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>1340</y>
+      <x>130</x>
+      <y>1360</y>
       <w>220</w>
       <h>40</h>
     </coordinates>
@@ -954,8 +932,8 @@ CreateEmployee</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>40</x>
-      <y>1360</y>
+      <x>70</x>
+      <y>1380</y>
       <w>90</w>
       <h>40</h>
     </coordinates>
@@ -966,8 +944,8 @@ GetAll</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>10</x>
-      <y>1380</y>
+      <x>40</x>
+      <y>1400</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
