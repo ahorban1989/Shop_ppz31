@@ -5,11 +5,12 @@
     <id>UMLGeneric</id>
     <coordinates>
       <x>160</x>
-      <y>80</y>
+      <y>70</y>
       <w>100</w>
-      <h>30</h>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>:HrManager</panel_attributes>
+    <panel_attributes>&lt;&lt;metaclass&gt;&gt;
+HrManager</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
