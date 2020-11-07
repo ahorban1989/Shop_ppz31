@@ -4,18 +4,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1110</x>
-      <y>320</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_:Instance_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>180</x>
+      <x>160</x>
       <y>80</y>
       <w>100</w>
       <h>30</h>
@@ -26,7 +15,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>20</x>
+      <x>0</x>
       <y>80</y>
       <w>100</w>
       <h>30</h>
@@ -37,7 +26,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>60</x>
+      <x>40</x>
       <y>100</y>
       <w>30</w>
       <h>660</h>
@@ -48,7 +37,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>100</y>
       <w>30</w>
       <h>660</h>
@@ -59,7 +48,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>60</x>
+      <x>40</x>
       <y>190</y>
       <w>190</w>
       <h>40</h>
@@ -71,7 +60,7 @@ GetAll</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>330</x>
       <y>100</y>
       <w>30</w>
       <h>660</h>
@@ -82,7 +71,7 @@ GetAll</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>290</x>
+      <x>270</x>
       <y>70</y>
       <w>130</w>
       <h>40</h>
@@ -94,7 +83,7 @@ DBItem&lt;Employee&gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>150</y>
       <w>160</w>
       <h>40</h>
@@ -106,7 +95,7 @@ DBInstance</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>170</y>
       <w>160</w>
       <h>40</h>
@@ -118,7 +107,7 @@ dbEmployees</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>210</y>
       <w>230</w>
       <h>40</h>
@@ -130,7 +119,7 @@ new</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>440</x>
+      <x>420</x>
       <y>80</y>
       <w>120</w>
       <h>30</h>
@@ -141,7 +130,7 @@ new</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>490</x>
+      <x>470</x>
       <y>100</y>
       <w>30</w>
       <h>660</h>
@@ -152,7 +141,7 @@ new</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>330</x>
       <y>110</y>
       <w>170</w>
       <h>40</h>
@@ -164,7 +153,7 @@ new</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>330</x>
       <y>130</y>
       <w>170</w>
       <h>40</h>
@@ -176,7 +165,7 @@ Items</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>310</x>
+      <x>290</x>
       <y>30</y>
       <w>190</w>
       <h>30</h>
@@ -187,7 +176,7 @@ Items</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>400</x>
       <y>50</y>
       <w>30</w>
       <h>710</h>
@@ -198,7 +187,7 @@ Items</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>230</y>
       <w>230</w>
       <h>40</h>
@@ -210,7 +199,7 @@ simpleEmployeeViews</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>260</y>
       <w>300</w>
       <h>40</h>
@@ -222,7 +211,7 @@ Items</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>280</y>
       <w>300</w>
       <h>40</h>
@@ -234,7 +223,7 @@ employees</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>210</x>
+      <x>190</x>
       <y>310</y>
       <w>490</w>
       <h>380</h>
@@ -248,7 +237,7 @@ Loop foreach
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>60</x>
+      <x>40</x>
       <y>690</y>
       <w>190</w>
       <h>40</h>
@@ -260,7 +249,7 @@ simpleEmployeeViews</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>510</x>
+      <x>490</x>
       <y>30</y>
       <w>190</w>
       <h>30</h>
@@ -271,7 +260,7 @@ simpleEmployeeViews</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>540</x>
       <y>50</y>
       <w>30</w>
       <h>710</h>
@@ -282,7 +271,7 @@ simpleEmployeeViews</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>380</y>
       <w>370</w>
       <h>40</h>
@@ -294,7 +283,7 @@ new</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>410</y>
       <w>370</w>
       <h>40</h>
@@ -306,7 +295,7 @@ employeeView</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>580</x>
+      <x>560</x>
       <y>80</y>
       <w>120</w>
       <h>30</h>
@@ -317,7 +306,7 @@ employeeView</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>610</x>
       <y>100</y>
       <w>30</w>
       <h>660</h>
@@ -328,7 +317,7 @@ employeeView</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>390</x>
+      <x>370</x>
       <y>460</y>
       <w>280</w>
       <h>180</h>
@@ -342,7 +331,7 @@ Loop foreach
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>400</x>
       <y>480</y>
       <w>100</w>
       <h>40</h>
@@ -354,7 +343,7 @@ employees</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>400</x>
       <y>500</y>
       <w>240</w>
       <h>40</h>
@@ -366,7 +355,7 @@ chiefC</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>410</x>
+      <x>390</x>
       <y>540</y>
       <w>210</w>
       <h>80</h>
@@ -381,7 +370,7 @@ Opt
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>320</y>
       <w>300</w>
       <h>40</h>
@@ -393,7 +382,7 @@ employees</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>350</y>
       <w>440</w>
       <h>40</h>
@@ -405,7 +394,7 @@ employee</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>200</x>
       <y>650</y>
       <w>230</w>
       <h>40</h>
