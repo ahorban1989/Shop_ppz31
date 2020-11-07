@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Shop_PPZ_31.controllers.CustomerManager" Collapsed="true">
+    <Position X="42.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CYAQAAAAAAgQAAAAAAAAIAACAAAEEAAAAsAAAACgAIA=</HashCode>
+      <FileName>Controllers\CustomerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.controllers.HrManager" Collapsed="true">
+    <Position X="44.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAgAAACAAAAAAAACAAEAAAAAAgAAAACAAIA=</HashCode>
+      <FileName>Controllers\HrManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.controllers.ProductManager" Collapsed="true">
+    <Position X="40.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAABAAAAAAAAAAAAAAEAEAAAAgAABACAAIA=</HashCode>
+      <FileName>Controllers\ProductManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.CustumerView" Collapsed="true">
+    <Position X="44.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\viewModels\CustumerView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.EmployeeView" Collapsed="true">
+    <Position X="42.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>models\viewModels\EmployeeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.OrderView" Collapsed="true">
+    <Position X="37.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAAAAAAAAAAAAAAAAACAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\viewModels\OrderView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.ProductOrderView" Collapsed="true">
+    <Position X="44.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\viewModels\ProductOrderView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.ProductView" Collapsed="true">
+    <Position X="46" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\viewModels\ProductView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.SimpleCustumerView" Collapsed="true">
+    <Position X="39" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>models\viewModels\SimpleCustumerView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.SimpleEmployeeView" Collapsed="true">
+    <Position X="40.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>models\viewModels\SimpleEmployeeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.viewModels.SimpleOrderView" Collapsed="true">
+    <Position X="42.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>models\viewModels\SimpleOrderView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.Customer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="40.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEBAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Customer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shop_PPZ_31.models.DBInitializer" Collapsed="true">
+    <Position X="46" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\DBInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.DBItem&lt;T&gt;" Collapsed="true">
+    <Position X="37.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAACAAAAAAAAAAAgAEBAAAAAAAAAAAACAA=</HashCode>
+      <FileName>models\DBItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.models.Description" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>models\Description.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shop_PPZ_31.models.Employee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="40.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAkBAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Employee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shop_PPZ_31.models.Order" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="46" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEBAAAAAAAAAAAABAAAAAAAAACAAA=</HashCode>
+      <FileName>models\Order.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shop_PPZ_31.models.Product" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAEBAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shop_PPZ_31.models.ProductOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="42.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAMBAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\ProductOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shop_PPZ_31.tests.Test1" Collapsed="true">
+    <Position X="44.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tests\Test1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.tests.Test2" Collapsed="true">
+    <Position X="46" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tests\Test2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.tests.Test3" Collapsed="true">
+    <Position X="37.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tests\Test3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.tests.TestHrManager" Collapsed="true">
+    <Position X="39" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tests\TestHrManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.helpers.ConsoleImputHelpers" Collapsed="true">
+    <Position X="37.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAAAA=</HashCode>
+      <FileName>views\helpers\ConsoleImputHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.helpers.ConsoleOutputHelpers" Collapsed="true">
+    <Position X="39" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABABAAAIABAAAAAABAAAACIIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>views\helpers\ConsoleOutputHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.AbstractMenu" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAABAAAAAAAAABAAAAAAAAAAAAAAAAAACAEAQAAI=</HashCode>
+      <FileName>views\AbstractMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.CustomerAddMenu" Collapsed="true">
+    <Position X="30.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\CustomerAddMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.CustomerDetailMenu" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAQBAAAAKAEAAAAA=</HashCode>
+      <FileName>views\CustomerDetailMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.CustomerMainMenu" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\CustomerMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.CustomerUpdateMenu" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\CustomerUpdateMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.HrAddMenu" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\HrAddMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.HrDetailMenu" Collapsed="true">
+    <Position X="21.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\HrDetailMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.HrMainMenu" Collapsed="true">
+    <Position X="25.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAEAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\HrMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.HrUpdateMenu" Collapsed="true">
+    <Position X="32.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\HrUpdateMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.MainMenu" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.OrderAddMenu" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\OrderAddMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.OrderAddProductMenu" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAAAAAAAAAAAAAABAAIAKAEAAAAA=</HashCode>
+      <FileName>views\OrderAddProductMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.OrderDetailMenu" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\OrderDetailMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.ProductAddMenu" Collapsed="true">
+    <Position X="23.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAKAEAAAAA=</HashCode>
+      <FileName>views\ProductAddMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.ProductDetailMenu" Collapsed="true">
+    <Position X="28" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAIAKAEAAAAA=</HashCode>
+      <FileName>views\ProductDetailMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.ProductMainMenu" Collapsed="true">
+    <Position X="34.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAIAKAEAAAAA=</HashCode>
+      <FileName>views\ProductMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.views.ProductUpdateMenu" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAIAKAEAAAAA=</HashCode>
+      <FileName>views\ProductUpdateMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop_PPZ_31.Program" Collapsed="true">
+    <Position X="37.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Shop_PPZ_31.interfaces.IItem" Collapsed="true">
+    <Position X="37.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>interfaces\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
