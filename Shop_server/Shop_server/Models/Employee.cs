@@ -16,6 +16,7 @@ namespace Shop_server.Models
 
         //navigation properties
         public Employee Chief { get; set; }
+        public List<Order> Orders { get; set; }
 
     }
 }

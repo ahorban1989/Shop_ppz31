@@ -11,6 +11,8 @@ namespace Shop_server.Models
         public string Name { get; set; }
         public string Surname { get; set; }
 
+        //navigation properties
+        public List<Order> Orders { get; set; }
 
     }
 }
