@@ -8,6 +8,6 @@ namespace Shop_server.Models.ViewModels
     public class EmployrrView
     {
         public SimpleEmployeeView Employee { get; set; }
-        public List<OrderView> Orders { get; set; }
+        public List<SimpleOrderView> Orders { get; set; }
     }
 }
