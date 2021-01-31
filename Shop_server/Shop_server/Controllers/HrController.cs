@@ -48,16 +48,49 @@ namespace Shop_server.Controllers
 
         // GET: api/Hr/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Employee>> GetEmployee(int id)
+        public async Task<ActionResult<EmployeeView>> GetEmployee(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
+            var employee =  await _context.Employees
+                            .Include(o => o.Orders)
+                            .ThenInclude(p => p.ProductOrders)
+                            .SingleAsync(e => e.Id == id);
 
             if (employee == null)
             {
                 return NotFound();
             }
 
-            return employee;
+            EmployeeView employeeView = new EmployeeView
+            {
+                Employee =
+                new SimpleEmployeeView
+                {
+                    Id = employee.Id,
+                    Name = employee.Name,
+                    SurName = employee.Surname,
+                    Position = employee.Position,
+                    Chief = (employee.Chief == null) ? null :
+                    new SimpleEmployeeView
+                    {
+                        Id = employee.Chief.Id,
+                        Name = employee.Chief.Name,
+                        SurName = employee.Chief.Surname,
+                        Position = employee.Chief.Position,
+                        Chief = null
+                    }
+                },
+                Orders = employee.Orders.Select(o =>
+                new SimpleOrderView
+                {
+                    Id = o.Id,
+                    ProductsCount = o.ProductOrders.Count,
+                    Sum = o.ProductOrders.Sum(p => p.ProductCount * p.ProductPrice)
+                }).ToList()
+            };
+
+
+
+            return employeeView;
         }
 
         // PUT: api/Hr/5

@@ -59,14 +59,26 @@ namespace Shop_server.Data
 
             //add clients
             var customers = new Customer[]
-{
+            {
                 new Customer{Name = "Igor", Surname = "Volkov"},
                 new Customer{Name = "Maxim", Surname = "Katkov"},
                 new Customer{Name = "Andrey", Surname = "Samosvalov"}
-};
+            };
             foreach (Customer c in customers)
             {
                 context.Customers.Add(c);
+            }
+            context.SaveChanges();
+
+            //add orders
+            var orders = new Order[]
+            {
+                new Order{CustomerId = 1, EmployeeId =1},
+                new Order{CustomerId = 2, EmployeeId =2}
+            };
+            foreach (Order o in orders)
+            {
+                context.Orders.Add(o);
             }
             context.SaveChanges();
         }
