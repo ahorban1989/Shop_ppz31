@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Shop_server.Models.ViewModels
 {
-    public class EmployrrView
+    public class EmployeeView
     {
         public SimpleEmployeeView Employee { get; set; }
         public List<SimpleOrderView> Orders { get; set; }
