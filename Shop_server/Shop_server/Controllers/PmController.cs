@@ -24,23 +24,49 @@ namespace Shop_server.Controllers
 
         // GET: api/Pm
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductView>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            return await _context.Products.Include(p => p.Description).Select(p =>
-                            new ProductView
+            return await _context.Products.Include(p => p.Description)
+                .Select(p => 
+                    new Product
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Price = p.Price,
+                        Description = (p.Description == null)? null:
+                            new Description
                             {
-                                Id = p.Id,
-                                Name = p.Name,
-                                Price = p.Price,
-                                Description = (p.Description == null)? null: p.Description.Info
-                            }).ToListAsync();
+                                Id = p.Description.Id,
+                                ProductId = p.Description.ProductId,
+                                Info = p.Description.Info,
+                                Product = null
+                            }
+                    }
+                )
+                .ToListAsync();
         }
 
         // GET: api/Pm/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductView>> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _context.Products.Include(p => p.Description)
+                                                .Select(p =>
+                                                        new Product
+                                                        {
+                                                            Id = p.Id,
+                                                            Name = p.Name,
+                                                            Price = p.Price,
+                                                            Description = (p.Description == null) ? null :
+                                                                new Description
+                                                                {
+                                                                    Id = p.Description.Id,
+                                                                    ProductId = p.Description.ProductId,
+                                                                    Info = p.Description.Info,
+                                                                    Product = null
+                                                                }
+                                                        }
+                                                  )
                                                  .SingleOrDefaultAsync(p => p.Id == id);
 
             if (product == null)
@@ -48,31 +74,24 @@ namespace Shop_server.Controllers
                 return NotFound();
             }
 
-            ProductView productView = new ProductView
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Price = product.Price,
-                Description = (product.Description == null) ? null :
-                               product.Description.Info
-
-            };
-
-            return productView;
+            return product;
         }
 
         // PUT: api/Pm/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, Product product, string description)
+        public async Task<IActionResult> PutProduct(int id, Product product)
         {
             if (id != product.Id)
             {
                 return BadRequest();
             }
 
+            Description description = product.Description;
+
             _context.Entry(product).State = EntityState.Modified;
+
 
             try
             {
@@ -89,21 +108,6 @@ namespace Shop_server.Controllers
                     throw;
                 }
             }
-
-            var nevDescription = await _context.Descriptions.SingleOrDefaultAsync(d => d.ProductId == id);
-
-            if (nevDescription != null)
-            {
-                nevDescription.Info = description;
-                _context.Descriptions.Update(nevDescription);
-            }
-            else
-            {
-                nevDescription = new Description { Info = description, ProductId = id };
-                _context.Descriptions.Add(nevDescription);
-            }
-
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }
@@ -143,6 +147,10 @@ namespace Shop_server.Controllers
         private bool ProductExists(int id)
         {
             return _context.Products.Any(e => e.Id == id);
+        }
+        private bool DescriptionExists(int id)
+        {
+            return _context.Descriptions.Any(d => d.Id == id);
         }
     }
 }
