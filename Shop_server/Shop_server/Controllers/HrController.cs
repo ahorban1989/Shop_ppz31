@@ -24,81 +24,93 @@ namespace Shop_server.Controllers
 
         // GET: api/Hr
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SimpleEmployeeView>>> GetEmployees()
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
-            var employees = _context.Employees.Select(e =>
+            var employees = _context.Employees.Include(e => e.Orders).Select(e =>
             
-            new SimpleEmployeeView
+            new Employee
             {
                 Id = e.Id,
                 Name = e.Name,
-                SurName = e.Surname,
-                Chief = (e.Chief == null) ? null :
-                new SimpleEmployeeView
-                {
-                    Id = e.Chief.Id,
-                    Name = e.Chief.Name,
-                    SurName = e.Chief.Surname,
-                    Position = e.Chief.Position,
-                    Chief = null
-                }
+                Surname = e.Surname,
+                Position = e.Position,
+                ChiefId = e.ChiefId,
+                Chief = (e.Chief == null)? null:
+                    new Employee
+                    {
+                        Id = e.Chief.Id,
+                        Name = e.Chief.Name,
+                        Surname = e.Chief.Position,
+                        ChiefId = e.Chief.ChiefId,
+                        Chief = null
+                    },
+                Orders = e.Orders
             }) ;
             return await employees.ToListAsync();
         }
 
         // GET: api/Hr/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<EmployeeView>> GetEmployee(int id)
+        public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
-
-            try
-            {
-                var employee = await _context.Employees
-                            .Include(o => o.Orders)
-                            .ThenInclude(p => p.ProductOrders)
-                            .SingleAsync(e => e.Id == id);
-
-                EmployeeView employeeView = new EmployeeView
-                {
-                    Employee =
-                    new SimpleEmployeeView
+            var employee = await _context.Employees.Include(e => e.Orders)
+                .ThenInclude(o => o.ProductOrders)
+                .ThenInclude(p => p.Product)
+                .Select(e =>
+                    new Employee
                     {
-                        Id = employee.Id,
-                        Name = employee.Name,
-                        SurName = employee.Surname,
-                        Position = employee.Position,
-                        Chief = (employee.Chief == null) ? null :
-                        new SimpleEmployeeView
-                        {
-                            Id = employee.Chief.Id,
-                            Name = employee.Chief.Name,
-                            SurName = employee.Chief.Surname,
-                            Position = employee.Chief.Position,
-                            Chief = null
-                        }
-                    },
-                    Orders = employee.Orders.Select(o =>
-                    new SimpleOrderView
-                    {
-                        Id = o.Id,
-                        ProductsCount = o.ProductOrders.Count,
-                        Sum = o.ProductOrders.Sum(p => p.ProductCount * p.ProductPrice)
-                    }).ToList()
-                };
+                        Id = e.Id,
+                        Name = e.Name,
+                        Surname = e.Surname,
+                        Position = e.Position,
+                        ChiefId = e.ChiefId,
+                        Chief = (e.Chief == null) ? null :
+                            new Employee
+                            {
+                                Id = e.Chief.Id,
+                                Name = e.Chief.Name,
+                                Surname = e.Chief.Position,
+                                ChiefId = e.Chief.ChiefId,
+                                Chief = null,
+                                Orders = null
+                            },
+                        Orders = e.Orders.Select(o =>
+                            new Order
+                            {
+                                Id = o.Id,
+                                CustomerId = o.Id,
+                                EmployeeId = o.EmployeeId,
+                                Customer = new Customer 
+                                { 
+                                    Id = o.Customer.Id,
+                                    Name = o.Customer.Name,
+                                    Surname = o.Customer.Surname,
+                                    Orders = null
+                                },
+                                ProductOrders = o.ProductOrders.Select(p =>
+                                        new ProductOrder
+                                        {
+                                            Id = p.Id,
+                                            ProductId = p.ProductId,
+                                            ProductPrice = p.ProductPrice,
+                                            OrderId = p.OrderId,
+                                            Order = null,
+                                            ProductCount = p.ProductCount,
+                                            Product = p.Product
+                                        }
+                                    ).ToList()
+                            }
+                        ).ToList()
+                    }
+                ).FirstOrDefaultAsync(e => e.Id == id);
 
-                return employeeView;
-            }
-            catch (InvalidOperationException)
+            if (employee == null)
             {
-                if (!EmployeeExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound();
             }
+
+            return employee;
+
         }
 
         // PUT: api/Hr/5
