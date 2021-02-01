@@ -12,6 +12,7 @@ namespace Shop_server.Models.ViewModels
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
+       // public int DescriptionId { get; set; }
         public string Description { get; set; }
 
     }
