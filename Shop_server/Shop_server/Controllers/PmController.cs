@@ -92,6 +92,18 @@ namespace Shop_server.Controllers
 
             _context.Entry(product).State = EntityState.Modified;
 
+            if(description!= null && description.ProductId == product.Id)
+            {
+                if(DescriptionExists(description.Id))
+                {
+                    _context.Entry(description).State = EntityState.Modified;
+                }
+                else
+                {
+                    _context.Descriptions.Add(description);
+                }
+            }
+
 
             try
             {
