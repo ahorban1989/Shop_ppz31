@@ -154,6 +154,27 @@ namespace Shop_server.Controllers
             return customer;
         }
 
+        // POST: api/Cm/5/addorder
+        [HttpPost("{id}/addorder")]
+        public async Task<ActionResult<Order>> PostOrder(int id, Order order)
+        {
+            if (order.CustomerId != id)
+            {
+                return BadRequest();
+            }
+
+            order.Employee = null;
+            order.Customer = null;
+            order.ProductOrders = null;
+
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+
+            return order;
+
+            
+        }
+
         private bool CustomerExists(int id)
         {
             return _context.Customers.Any(e => e.Id == id);
