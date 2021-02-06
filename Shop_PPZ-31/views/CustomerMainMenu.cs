@@ -62,7 +62,7 @@ namespace Shop_PPZ_31.views
                     customerDetailMenu.Run();
                     break;
                 case "3":
-                    //TODO exit
+                    // exit
                     SetDone();
                     break;
             }

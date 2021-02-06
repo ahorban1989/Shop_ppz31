@@ -21,8 +21,8 @@ namespace Shop_PPZ_31
             tests.TestHrManager testHrManager = new tests.TestHrManager();
             testHrManager.RunTest();
 
-            views.MainMenu MainMenu = new MainMenu();
-            MainMenu.Run();
+            views.MainMenu mainMenu = new MainMenu();
+            mainMenu.Run();
 
             //Console.ReadLine();
         }
