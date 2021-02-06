@@ -6,4 +6,8 @@
     <RootNamespace>Shop_PPZ_31</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Shop_server\Shop_server\Shop_server.csproj" />
+  </ItemGroup>
+
 </Project>

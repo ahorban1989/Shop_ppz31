@@ -4,6 +4,9 @@ using System.Text;
 using Shop_PPZ_31.models;
 using Shop_PPZ_31.models.viewModels;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text.Json;
 
 namespace Shop_PPZ_31.controllers
 {
@@ -15,29 +18,73 @@ namespace Shop_PPZ_31.controllers
         static DBItem<ProductOrder> dbProductOrders = DBItem<ProductOrder>.DBInstance();
         static DBItem<Product> dbProducts = DBItem<Product>.DBInstance();
 
+        static HttpClientHandler clientHandler = new HttpClientHandler();
+
+
+        static HttpClient client = new HttpClient(clientHandler);
+
+        static CustomerManager()
+        {
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+
+
+            client.BaseAddress = new Uri("https://localhost:5001/api/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+        }
+
         #region CUSTOMER CRUD
         public static Customer CreateCostumer(Customer customer)
         {
-            return dbCustomers.AddItem(customer);
+            Shop_server.Models.Customer newCusomer = new Shop_server.Models.Customer
+            {
+                Name = customer.Name,
+                Surname = customer.Surname,
+                Orders = null
+            };
+
+            var clienJson = new StringContent(
+                JsonSerializer.Serialize(newCusomer),
+                Encoding.UTF8,
+                "application/json"
+                );
+
+            var response = client.PostAsync("Cm", clienJson).Result.Content;
+
+            var resString = response.ReadAsStringAsync().Result;
+            newCusomer = JsonSerializer.Deserialize<Shop_server.Models.Customer>(resString, new JsonSerializerOptions
+            { PropertyNameCaseInsensitive = true });
+            return new Customer(newCusomer.Name, newCusomer.Surname)
+            {
+                Id = newCusomer.Id
+            };
         }
 
         public static List<SimpleCustumerView> GetAll()
         {
-            List<SimpleCustumerView> simpleCustumerViews = new List<SimpleCustumerView>();
 
-            List<Customer> customers = dbCustomers.Items;
-            foreach (Customer customer in customers)
-            {
-                SimpleCustumerView simpleCustumerView = new SimpleCustumerView();
-                simpleCustumerView.CustomerV = customer;
+            var response = client.GetAsync("Cm").Result.Content;
 
-                var selectOrder = from o in dbOrders.Items
-                                  where o.CustomerId == customer.Id
-                                  select o;
+            var resSttring = response.ReadAsStringAsync().Result;
 
-                simpleCustumerView.OrderCountV = selectOrder.Count();
-                simpleCustumerViews.Add(simpleCustumerView);
-            }
+
+            List<Shop_server.Models.Customer> customers = JsonSerializer
+                .Deserialize<List<Shop_server.Models.Customer>>(resSttring, new JsonSerializerOptions 
+                {PropertyNameCaseInsensitive = true });
+
+
+            List<SimpleCustumerView> simpleCustumerViews = customers.Select(c => new SimpleCustumerView
+                {
+                    CustomerV = new Customer(c.Name, c.Surname)
+                    {
+                        Id = c.Id,
+                        Name = c.Name,
+                        Surname = c.Surname
+                    },
+                    OrderCountV = (c.Orders == null)?0 : c.Orders.Count
+                }).ToList();
+
 
             return simpleCustumerViews;
         }
