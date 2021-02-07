@@ -251,11 +251,13 @@ namespace Shop_PPZ_31.controllers
 
         public static void DeleteProductOrder(ProductOrder productOrder)
         {
+            // TODO
             throw new NotImplementedException();
         }
 
         public static void DeleteProductOrder(int productOrder)
         {
+            // TODO
             throw new NotImplementedException();
         }
 
