@@ -64,7 +64,7 @@ namespace Shop_server.Controllers
 
                         }).ToList()
                     })
-                .SingleAsync();
+                .SingleOrDefaultAsync(o => o.Id == id);
                 
 
             if (order == null)

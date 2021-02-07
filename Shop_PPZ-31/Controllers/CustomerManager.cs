@@ -12,11 +12,6 @@ namespace Shop_PPZ_31.controllers
 {
     static class CustomerManager
     {
-        static DBItem<Employee> dbEmployees = DBItem<Employee>.DBInstance();
-        static DBItem<Order> dbOrders = DBItem<Order>.DBInstance();
-        static DBItem<Customer> dbCustomers = DBItem<Customer>.DBInstance();
-        static DBItem<ProductOrder> dbProductOrders = DBItem<ProductOrder>.DBInstance();
-        static DBItem<Product> dbProducts = DBItem<Product>.DBInstance();
 
         static HttpClientHandler clientHandler = new HttpClientHandler();
 

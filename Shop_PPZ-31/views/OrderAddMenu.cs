@@ -46,6 +46,7 @@ namespace Shop_PPZ_31.views
                     order = CustomerManager.CreateOrder(order);
                     OrderDetailMenu orderDetailMenu = new OrderDetailMenu(CustomerManager.GetOrderById(order.Id));
                     orderDetailMenu.Run();
+                    SetDone();
                     break;
                 case "2":
                     SetDone();
