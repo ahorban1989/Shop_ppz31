@@ -175,17 +175,8 @@ namespace Shop_PPZ_31.controllers
 
         public static ProductOrder AddProducOrderToOrder(ProductOrder productOrder, Order order)
         {
-            productOrder.OrderId = order.Id;
-
-            try
-            {
-                return dbProductOrders.AddItem(productOrder);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+            // TODO write a method that adds the product to order
+            throw new NotImplementedException();
         }
 
         public static OrderView GetOrderById(int id)
@@ -226,79 +217,46 @@ namespace Shop_PPZ_31.controllers
             };
         }
 
-        public static void UpdateOrder (Order order)
+        public static bool UpdateOrder (Order order)
         {
-            try
+            Shop_server.Models.Order updatedOrder = new Shop_server.Models.Order
             {
-                dbOrders.Update(order);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+                CustomerId = order.CustomerId,
+                EmployeeId = order.EmployeeId
+            };
+
+            var orderJson = new StringContent(
+                JsonSerializer.Serialize(updatedOrder),
+                Encoding.UTF8,
+                "application/json");
+
+            var response = client.PutAsync($"Orders/{order.Id}", orderJson).Result.IsSuccessStatusCode;
+            return response;
         }
 
         public static void UpdateProductOrder (ProductOrder productOrder)
         {
-            try
-            {
-                dbProductOrders.Update(productOrder);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+            // TODO Write a method that updates producOrder in order
+            throw new NotImplementedException();
         }
 
-        public static void DeleteOrder(int id)
+        public static Order DeleteOrder(int id)
         {
-            Order order;
-            try
-            {
-                order = dbOrders.FindById(id);
+            var response = client.DeleteAsync($"Orders/{id}").Result.Content;
+            var responseJson = response.ReadAsStringAsync().Result;
 
-                foreach (ProductOrder product in dbProductOrders.Items)
-                {
-                    if (product.OrderId == order.Id) dbProductOrders.Delete(product.Id);
-                }
-
-                dbOrders.Delete(id);
-            }
-            catch (Exception e)
-            {
-
-                Console.Error.WriteLine(e);
-                throw;
-            }
-
+            Shop_server.Models.Order deletedOrder = JsonSerializer.Deserialize<Shop_server.Models.Order>(responseJson, jsonOptions);
+            return new Order(deletedOrder.CustomerId, deletedOrder.EmployeeId) { Id = deletedOrder.Id };
         }
 
         public static void DeleteProductOrder(ProductOrder productOrder)
         {
-            try
-            {
-                dbProductOrders.Delete(productOrder.Id);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+            throw new NotImplementedException();
         }
 
         public static void DeleteProductOrder(int productOrder)
         {
-            try
-            {
-                dbProductOrders.Delete(productOrder);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+            throw new NotImplementedException();
         }
 
         #endregion
