@@ -92,32 +92,29 @@ namespace Shop_PPZ_31.controllers
         public static CustumerView GetById(int id)
         {
 
-            CustumerView custumerView = new CustumerView();
-            custumerView.SimpleOrderViewsV = new List<SimpleOrderView>();
-            Customer customer = dbCustomers.FindById(id);
+            var response = client.GetAsync($"Cm/{id}").Result.Content;
+            var resSring = response.ReadAsStringAsync().Result;
+            
+            Shop_server.Models.Customer customer  = JsonSerializer
+                .Deserialize<Shop_server.Models.Customer>(resSring, new JsonSerializerOptions
+                { PropertyNameCaseInsensitive = true });
 
-            custumerView.CustomerV = customer;
-
-            List<Order> orders = dbOrders.Items;
-
-
-            var selectOrders = from order in orders
-                               where order.EmployeeId == customer.Id
-                               select order;
-
-            foreach (var order in selectOrders)
+            CustumerView custumerView = new CustumerView
             {
-
-                var selectProductOrders = from p in dbProductOrders.Items
-                                          where p.OrderId == order.Id
-                                          select p;
-
-                decimal sum = selectProductOrders.Sum(n => n.ProductPrice);
-                SimpleOrderView simpleOrderView = new SimpleOrderView();
-                simpleOrderView.OrderV = order;
-                simpleOrderView.Sum = sum;
-                custumerView.SimpleOrderViewsV.Add(simpleOrderView);
-            }
+                CustomerV = new Customer(customer.Name, customer.Surname)
+                {
+                    Id = customer.Id
+                },
+                SimpleOrderViewsV = (customer.Orders == null) ? null :
+                    customer.Orders.Select(o => new SimpleOrderView
+                    {
+                        OrderV = new Order(o.CustomerId, o.EmployeeId)
+                        {
+                            Id = o.Id
+                        },
+                        Sum = o.ProductOrders.Sum(po => po.ProductCount*po.ProductPrice)
+                    }).ToList()
+            };
 
             return custumerView;
 
