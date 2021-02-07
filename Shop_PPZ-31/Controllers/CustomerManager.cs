@@ -155,15 +155,22 @@ namespace Shop_PPZ_31.controllers
         
         public static Order CreateOrder(Order order)
         {
-            try
+            Shop_server.Models.Order newOrder = new Shop_server.Models.Order
             {
-                return dbOrders.AddItem(order);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+                CustomerId = order.CustomerId,
+                EmployeeId = order.EmployeeId
+            };
+
+            var orderJson = new StringContent(
+                JsonSerializer.Serialize(newOrder),
+                Encoding.UTF8,
+                "application/json");
+
+            var response = client.PostAsync($"Cm/{order.CustomerId}/addorder", orderJson).Result.Content;
+            var responseJsong = response.ReadAsStringAsync().Result;
+
+            newOrder = JsonSerializer.Deserialize<Shop_server.Models.Order>(responseJsong, jsonOptions);
+            return new Order(newOrder.CustomerId, newOrder.EmployeeId){ Id = newOrder.Id };
         }
 
         public static ProductOrder AddProducOrderToOrder(ProductOrder productOrder, Order order)
@@ -183,27 +190,40 @@ namespace Shop_PPZ_31.controllers
 
         public static OrderView GetOrderById(int id)
         {
-            Console.WriteLine("getting started");
-            OrderView orderView = new OrderView();
-            orderView.ProductsOrderViewsV = new List<ProductOrderView>();
-            orderView.OrderV = dbOrders.FindById(id);
-            orderView.EmployeeV = dbEmployees.FindById(orderView.OrderV.EmployeeId);
-            orderView.CustosumerV = dbCustomers.FindById(orderView.OrderV.CustomerId);
+            var response = client.GetAsync($"Orders/{id}").Result.Content;
+            var responseJson = response.ReadAsStringAsync().Result;
 
+            Shop_server.Models.Order order = JsonSerializer.Deserialize<Shop_server.Models.Order>(responseJson, jsonOptions);
 
-            var selectProductsOrder = from po in dbProductOrders.Items
-                                      where po.OrderId == orderView.OrderV.Id
-                                      select po;
-            foreach(ProductOrder po in selectProductsOrder)
+            return new OrderView
             {
-                ProductOrderView productOrderView = new ProductOrderView();
-                productOrderView.ProuctOrderV = po;
-                productOrderView.ProductV = dbProducts.FindById(po.ProductId);
-                Console.WriteLine("po added");
-                orderView.ProductsOrderViewsV.Add(productOrderView);
-            }
-
-            return orderView;
+                OrderV = new Order(order.CustomerId, order.EmployeeId)
+                {
+                    Id = order.Id
+                },
+                EmployeeV = new Employee(order.Employee.Name, order.Employee.Surname,
+                    order.Employee.Position,
+                    (order.Employee.ChiefId != null) ? order.Employee.ChiefId.Value : 0)
+                {
+                    Id = order.Employee.Id
+                },
+                CustosumerV = new Customer(order.Customer.Name, order.Customer.Surname)
+                {
+                    Id = order.Employee.Id
+                },
+                ProductsOrderViewsV = order.ProductOrders.Select(p =>
+                    new ProductOrderView
+                    {
+                        ProductV = new Product (p.Product.Name, p.Product.Price)
+                        {
+                            Id = p.Product.Id
+                        },
+                        ProuctOrderV = new ProductOrder (p.ProductId, p.ProductPrice, p.OrderId, p.ProductCount)
+                        {
+                            Id = p.Id
+                        }
+                    }).ToList()
+            };
         }
 
         public static void UpdateOrder (Order order)
