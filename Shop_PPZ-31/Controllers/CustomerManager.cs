@@ -120,17 +120,25 @@ namespace Shop_PPZ_31.controllers
 
         }
 
-        public static void CustomerUpdate(Customer customer)
+        public static bool CustomerUpdate(Customer customer)
         {
-            try
+            Shop_server.Models.Customer updatingCustomer = new Shop_server.Models.Customer
             {
-                dbCustomers.Update(customer);
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e);
-                throw;
-            }
+                Id = customer.Id,
+                Name = customer.Name,
+                Surname = customer.Surname,
+                Orders = null
+                
+            };
+
+            var customerJson = new StringContent(
+                 JsonSerializer.Serialize(updatingCustomer),
+                 Encoding.UTF8,
+                 "application/json");
+
+            var response = client.PutAsync($"Cm/{customer.Id}", customerJson).Result.IsSuccessStatusCode;
+
+            return response;
         }
 
         public static void DeleteCostumer(int id)
