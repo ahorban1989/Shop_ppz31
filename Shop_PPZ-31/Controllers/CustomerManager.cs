@@ -22,8 +22,9 @@ namespace Shop_PPZ_31.controllers
 
 
         static HttpClient client = new HttpClient(clientHandler);
+        static JsonSerializerOptions jsonOptions = new JsonSerializerOptions{ PropertyNameCaseInsensitive = true };
 
-        static CustomerManager()
+    static CustomerManager()
         {
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
@@ -53,8 +54,7 @@ namespace Shop_PPZ_31.controllers
             var response = client.PostAsync("Cm", clienJson).Result.Content;
 
             var resString = response.ReadAsStringAsync().Result;
-            newCusomer = JsonSerializer.Deserialize<Shop_server.Models.Customer>(resString, new JsonSerializerOptions
-            { PropertyNameCaseInsensitive = true });
+            newCusomer = JsonSerializer.Deserialize<Shop_server.Models.Customer>(resString, jsonOptions);
             return new Customer(newCusomer.Name, newCusomer.Surname)
             {
                 Id = newCusomer.Id
@@ -70,8 +70,7 @@ namespace Shop_PPZ_31.controllers
 
 
             List<Shop_server.Models.Customer> customers = JsonSerializer
-                .Deserialize<List<Shop_server.Models.Customer>>(resSttring, new JsonSerializerOptions 
-                {PropertyNameCaseInsensitive = true });
+                .Deserialize<List<Shop_server.Models.Customer>>(resSttring, jsonOptions);
 
 
             List<SimpleCustumerView> simpleCustumerViews = customers.Select(c => new SimpleCustumerView
@@ -96,8 +95,7 @@ namespace Shop_PPZ_31.controllers
             var resSring = response.ReadAsStringAsync().Result;
             
             Shop_server.Models.Customer customer  = JsonSerializer
-                .Deserialize<Shop_server.Models.Customer>(resSring, new JsonSerializerOptions
-                { PropertyNameCaseInsensitive = true });
+                .Deserialize<Shop_server.Models.Customer>(resSring, jsonOptions);
 
             CustumerView custumerView = new CustumerView
             {
@@ -141,21 +139,15 @@ namespace Shop_PPZ_31.controllers
             return response;
         }
 
-        public static void DeleteCostumer(int id)
+        public static Customer DeleteCostumer(int id)
         {
-            foreach (Order order in dbOrders.Items)
-            {
-                if (order.CustomerId == id)
-                {
-                    foreach (ProductOrder productOrder in dbProductOrders.Items)
-                    {
-                        if (productOrder.ProductId == order.Id) dbProductOrders.Delete(productOrder.Id);
-                    }
-                    dbOrders.Delete(order.Id);
-                }
+            var response = client.DeleteAsync($"Cm/{id}").Result.Content;
+            var responseString = response.ReadAsStringAsync().Result;
 
-            }
-            dbCustomers.Delete(id);
+            Shop_server.Models.Customer customer = JsonSerializer
+                .Deserialize<Shop_server.Models.Customer>(responseString, jsonOptions);
+
+            return new Customer(customer.Name, customer.Surname) { Id = customer.Id };
         }
         #endregion
 
