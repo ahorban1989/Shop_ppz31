@@ -14,15 +14,12 @@ namespace Shop_PPZ_31.controllers
     {
 
         static HttpClientHandler clientHandler = new HttpClientHandler();
-
-
         static HttpClient client = new HttpClient(clientHandler);
         static JsonSerializerOptions jsonOptions = new JsonSerializerOptions{ PropertyNameCaseInsensitive = true };
 
     static CustomerManager()
         {
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-
 
             client.BaseAddress = new Uri("https://localhost:5001/api/");
             client.DefaultRequestHeaders.Accept.Clear();

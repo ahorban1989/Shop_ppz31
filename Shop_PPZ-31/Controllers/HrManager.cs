@@ -69,10 +69,10 @@ namespace Shop_PPZ_31.controllers
                 {
                     Id = e.Id
                 },
-                ChiefV = new Employee (e.Chief.Name, e.Chief.Name,
-                    e.Chief.Position, e.Chief.ChiefId.GetValueOrDefault())
+                ChiefV = new Employee ((e.Chief == null) ? "" : e.Chief.Name, (e.Chief == null) ? "" : e.Chief.Name,
+                    (e.Chief == null) ? "" : e.Chief.Position, (e.Chief == null) ? 0 : e.Chief.ChiefId.GetValueOrDefault())
                 {
-                    Id = e.Chief.Id
+                    Id = (e.Chief == null) ? 0 : e.Chief.Id
                 }
             }).ToList();
             return simpleEmployeeViews;
@@ -94,10 +94,10 @@ namespace Shop_PPZ_31.controllers
                 {
                     Id = employee.Id
                 },
-                ChiefV = new Employee(employee.Chief.Name, employee.Chief.Surname,
-                    employee.Chief.Position, employee.Chief.ChiefId.GetValueOrDefault())
+                ChiefV = new Employee((employee.Chief == null) ? "" : employee.Chief.Name, (employee.Chief == null) ? "" : employee.Chief.Surname,
+                    (employee.Chief == null) ? "" : employee.Chief.Position, (employee.Chief == null) ? 0 : employee.Chief.ChiefId.GetValueOrDefault())
                 {
-                    Id = employee.Chief.Id
+                    Id = (employee.Chief == null) ? 0 : employee.Chief.Id
                 },
                 SimpleOrderViewsV = employee.Orders.Select(o => new SimpleOrderView 
                 {
