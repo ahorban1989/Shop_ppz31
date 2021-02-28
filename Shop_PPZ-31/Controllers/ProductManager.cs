@@ -173,28 +173,6 @@ namespace Shop_PPZ_31.controllers
         }
 
         //DELETE
-        /*public static void Delete(int id)
-        {
-            Product product;
-            try
-            {
-                product = dbProducts.FindById(id);
-
-                foreach (Description description in dbDescriptions.Items)
-                {
-                    if (description.ProductId == product.Id) dbDescriptions.Delete(description.Id);
-                }
-
-                dbProducts.Delete(id);
-            }
-            catch (Exception e)
-            {
-
-                Console.Error.WriteLine(e);
-            }
-        }*/
-
-        //DELETE
         public static Product Delete(int id)
         {
             var response = client.DeleteAsync($"Pm/{id}").Result.Content;
