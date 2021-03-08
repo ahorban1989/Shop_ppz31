@@ -7,13 +7,11 @@ namespace Shop_PPZ_31.models
 {
     class Product : IItem
     {
-        private static int count = 1;
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public Product(string Name, decimal Price)
         {
-            this.Id = count++;
             this.Name = Name;
             this.Price = Price;
         }

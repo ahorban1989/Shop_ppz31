@@ -12,9 +12,6 @@ namespace Shop_PPZ_31.controllers
 {
     static class ProductManager
     {
-        static DBItem<Product> dbProducts = DBItem<Product>.DBInstance();
-        static DBItem<Description> dbDescriptions = DBItem<Description>.DBInstance();
-
         static HttpClientHandler clientHandler = new HttpClientHandler();
         static HttpClient client = new HttpClient(clientHandler);
         static JsonSerializerOptions jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };

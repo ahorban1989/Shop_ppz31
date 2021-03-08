@@ -7,7 +7,6 @@ namespace Shop_PPZ_31.models
 {
     class ProductOrder : IItem
     {
-        private static int count = 1;
         public int Id { get; set; }
         public int ProductId { get; set; }
         public decimal ProductPrice { get; set; }
@@ -15,7 +14,6 @@ namespace Shop_PPZ_31.models
         public int ProductCount { get; set; }
         public ProductOrder(int productId, decimal productPrice, int orderId, int productCount)
         {
-            this.Id = count++;
             this.ProductId = productId;
             this.ProductPrice = productPrice;
             this.OrderId = orderId;
