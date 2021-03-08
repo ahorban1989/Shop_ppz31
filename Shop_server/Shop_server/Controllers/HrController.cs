@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Shop_server.Data;
 using Shop_server.Models;
-using Shop_server.Models.ViewModels;
 
 namespace Shop_server.Controllers
 {

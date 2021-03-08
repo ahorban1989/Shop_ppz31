@@ -30,7 +30,7 @@ namespace Shop_server
             services.AddDbContext<ShopContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            //services.AddDatabaseDeveloperPageExceptionFilter();
+
 
             services.AddControllers();
         }
