@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>170</x>
+      <y>90</y>
+      <w>590</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>lt=.
+Singleton Pattern
+--
+
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>210</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>:HR
+--
+- dBEmployee : DBItem&lt;Employee&gt;
+--
++ ReadCustomer () : void
++ CreateCustomer () : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>210</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>DBItem&lt;Employee&gt;
+--
++ Items { get; set; } : List&lt;Employee&gt;
+--
++ AddItem (item : Employee)
++ GetById (id : int) : Employee
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>240</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>120</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>HR, DBItem&lt;T&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
