@@ -1,0 +1,25 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>70</y><w>210</w><h>70</h></coordinates><panel_attributes>_productManager: ProductManager_
+--
+dbProduct: DBItem&lt;Product&gt;
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>130</y><w>30</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>180</y><w>210</w><h>70</h></coordinates><panel_attributes>_dbProduct: DBItem&lt;Product&gt;_
+--
+Items: List&lt;Product&gt;
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>290</y><w>210</w><h>70</h></coordinates><panel_attributes>_Items: List&lt;Product&gt;_
+--
+
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>240</y><w>30</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>400</y><w>210</w><h>90</h></coordinates><panel_attributes>_[0] : Product_
+--
+Id = 1
+Name = "Product1"
+Price = 10
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>400</y><w>210</w><h>90</h></coordinates><panel_attributes>_[1] : Product_
+--
+Id = 2
+Name = "Product2"
+Price = 20
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>350</y><w>140</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>120;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>350</y><w>370</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;350;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>400</y><w>210</w><h>90</h></coordinates><panel_attributes>_[2] : Product_
+--
+Id = 3
+Name = "Product3"
+Price = 30
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>350</y><w>130</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;110;50</additional_attributes></element></diagram>
