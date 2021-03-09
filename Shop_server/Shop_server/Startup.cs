@@ -31,7 +31,6 @@ namespace Shop_server
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
-
             services.AddControllers();
         }
 
