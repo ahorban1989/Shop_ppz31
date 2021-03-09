@@ -12,7 +12,7 @@ namespace Shop_PPZ_31.controllers
 {
     static class HrManager
     {
-        static DBItem<Employee> dbEmployees = DBItem<Employee>.DBInstance();
+        //static DBItem<Employee> dbEmployees = DBItem<Employee>.DBInstance();
 
         static HttpClientHandler clientHandler = new HttpClientHandler();
         static HttpClient client = new HttpClient(clientHandler);
