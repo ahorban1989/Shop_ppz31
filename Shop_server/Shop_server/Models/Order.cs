@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
+using Shop_server.interfaces;
 
 namespace Shop_server.Models
 {
-    public class Order
+    public class Order : IItem
     {
         public int Id { get; set; }
         public int CustomerId { get; set; }

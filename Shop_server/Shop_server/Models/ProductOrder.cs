@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Shop_server.interfaces;
 
 namespace Shop_server.Models
 {
-    public class ProductOrder
+    public class ProductOrder : IItem
     {
         public int Id { get; set; }
         public int ProductId { get; set; }

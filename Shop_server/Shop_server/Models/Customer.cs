@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using Shop_server.interfaces;
 
 namespace Shop_server.Models
 {
-    public class Customer
+    public class Customer : IItem
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }

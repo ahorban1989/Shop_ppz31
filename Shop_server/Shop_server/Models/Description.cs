@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Shop_server.interfaces;
 
 namespace Shop_server.Models
 {
-    public class Description
+    public class Description : IItem
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
