@@ -20,22 +20,22 @@ namespace Shop_PPZ_31.views
             switch (switchMenu)
             {
                 case "1":
-                    //TODO HR menu
+                    // HR menu
                     views.HrMainMenu hrMainMenu = new HrMainMenu(controllers.HrManager.GetAll());
                     hrMainMenu.Run();
                     break;
                 case "2":
-                    //TODO PR menu
+                    // PR menu
                     views.ProductMainMenu productMainMenu = new ProductMainMenu(controllers.ProductManager.GetAll());
                     productMainMenu.Run();
                     break;
                 case "3":
-                    //TODO CM menu
+                    // CM menu
                     views.CustomerMainMenu customerMainMenu = new CustomerMainMenu(controllers.CustomerManager.GetAll());
                     customerMainMenu.Run();
                     break;
                 case "4":
-                    //TODO exit
+                    // exit
                     SetDone();
                     break;
             }

@@ -20,7 +20,7 @@ namespace Shop_PPZ_31.views.helpers
 
         public static void OutputSimpleEmployyeeView(SimpleEmployeeView e)
         {
-            Console.WriteLine("id: " + e.EmployeeV.Id + ",\t name: " + e.EmployeeV.Name
+            Console.WriteLine("id: " + e.EmployeeV.Id + ",\t name: " + e.EmployeeV.Name +" " + e.EmployeeV.Surname
                                + ", \t chief name: " + e.ChiefV.Name);
         }
 
